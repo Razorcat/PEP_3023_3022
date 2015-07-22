@@ -461,22 +461,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="esp_BrosureProizvodi_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="esp_Brosure_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
           <Parameter Name="DatumP" Type="datetime" Mode="In" />
           <Parameter Name="DatumI" Type="datetime" Mode="In" />
-        </Function>
-        <Function Name="esp_BrosureProizvodi_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="esp_Dobavljaci_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
-          <Parameter Name="KontaktOsoba" Type="nvarchar" Mode="In" />
-          <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
-          <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
-          <Parameter Name="Fax" Type="nvarchar" Mode="In" />
-          <Parameter Name="Web" Type="nvarchar" Mode="In" />
-          <Parameter Name="Email" Type="nvarchar" Mode="In" />
-          <Parameter Name="ZiroRacun" Type="nvarchar" Mode="In" />
-          <Parameter Name="Napomena" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="esp_Dobavljaci_SelectById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DobavljacID" Type="int" Mode="In" />
@@ -487,6 +476,16 @@
         <Function Name="esp_Izlaz_SelectByDatum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DatumOd" Type="datetime" Mode="In" />
           <Parameter Name="DatumDo" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="esp_KorisniciUloge_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KorisnikID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="esp_KorisniciUloge_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KorisnikID" Type="int" Mode="In" />
+          <Parameter Name="UlogaID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="esp_KorisniciUloge_SelectByKorisnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KorisnikID" Type="int" Mode="In" />
         </Function>
         <Function Name="esp_Korisnici_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Ime" Type="nvarchar" Mode="In" />
@@ -522,16 +521,6 @@
           <Parameter Name="KorisnikID" Type="int" Mode="In" />
           <Parameter Name="Status" Type="bit" Mode="In" />
         </Function>
-        <Function Name="esp_KorisniciUloge_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="KorisnikID" Type="int" Mode="In" />
-        </Function>
-        <Function Name="esp_KorisniciUloge_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="KorisnikID" Type="int" Mode="In" />
-          <Parameter Name="UlogaID" Type="int" Mode="In" />
-        </Function>
-        <Function Name="esp_KorisniciUloge_SelectByKorisnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="KorisnikID" Type="int" Mode="In" />
-        </Function>
         <Function Name="esp_Kupci_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Ime" Type="nvarchar" Mode="In" />
           <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
@@ -544,10 +533,14 @@
           <Parameter Name="KorisnickoIme" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="esp_Narudzbe_SelectAktivne" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="esp_ProizvodiBrosure_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProizvodID" Type="int" Mode="In" />
+          <Parameter Name="BrosuraID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_Proizvodi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
           <Parameter Name="Sifra" Type="nvarchar" Mode="In" />
-          <Parameter Name="Cijena" Type="decimal" Mode="In" />
+          <Parameter Name="Cijena" Type="decimal" Mode="In" Precision="18" Scale="10" />
           <Parameter Name="VrstaID" Type="int" Mode="In" />
           <Parameter Name="JedinicaMjereID" Type="int" Mode="In" />
           <Parameter Name="Slika" Type="varbinary(max)" Mode="In" />
@@ -579,25 +572,21 @@
           <Parameter Name="MaxRows" Type="int" Mode="In" />
           <Parameter Name="TotalRows" Type="int" Mode="InOut" />
         </Function>
-        <Function Name="esp_ProizvodiBrosure_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ProizvodID" Type="int" Mode="In" />
-          <Parameter Name="BrosuraID" Type="int" Mode="In" />
-        </Function>
-        <Function Name="esp_Ulazi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="BrojFakture" Type="nvarchar" Mode="In" />
-          <Parameter Name="Datum" Type="datetime" Mode="In" />
-          <Parameter Name="IznosRacuna" Type="decimal" Mode="In" />
-          <Parameter Name="PDV" Type="decimal" Mode="In" />
-          <Parameter Name="Napomena" Type="nvarchar" Mode="In" />
-          <Parameter Name="SkladisteID" Type="int" Mode="In" />
-          <Parameter Name="KorisnikID" Type="int" Mode="In" />
-          <Parameter Name="DobavljacID" Type="int" Mode="In" />
-        </Function>
         <Function Name="esp_UlazStavke_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UlazID" Type="int" Mode="In" />
           <Parameter Name="ProizvodID" Type="int" Mode="In" />
           <Parameter Name="Kolicina" Type="int" Mode="In" />
-          <Parameter Name="Cijena" Type="decimal" Mode="In" />
+          <Parameter Name="Cijena" Type="decimal" Mode="In" Precision="18" Scale="10" />
+        </Function>
+        <Function Name="esp_Ulazi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BrojFakture" Type="nvarchar" Mode="In" />
+          <Parameter Name="Datum" Type="datetime" Mode="In" />
+          <Parameter Name="IznosRacuna" Type="decimal" Mode="In"  Precision="18" Scale="10" />
+          <Parameter Name="PDV" Type="decimal" Mode="In" Precision="18" Scale="10"  />
+          <Parameter Name="Napomena" Type="nvarchar" Mode="In" />
+          <Parameter Name="SkladisteID" Type="int" Mode="In" />
+          <Parameter Name="KorisnikID" Type="int" Mode="In" />
+          <Parameter Name="DobavljacID" Type="int" Mode="In" />
         </Function>
         <Function Name="esp_VrsteProizvoda_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
@@ -1313,7 +1302,7 @@
           <FunctionImport Name="esp_Proizvodi_Insert">
             <Parameter Name="Naziv" Mode="In" Type="String" />
             <Parameter Name="Sifra" Mode="In" Type="String" />
-            <Parameter Name="Cijena" Mode="In" Type="Decimal" />
+            <Parameter Name="Cijena" Mode="In" Type="Decimal" Precision="18" Scale="10"  />
             <Parameter Name="VrstaID" Mode="In" Type="Int32" />
             <Parameter Name="JedinicaMjereID" Mode="In" Type="Int32" />
             <Parameter Name="Slika" Mode="In" Type="Binary" />
@@ -1332,8 +1321,8 @@
           <FunctionImport Name="esp_Ulazi_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="BrojFakture" Mode="In" Type="String" />
             <Parameter Name="Datum" Mode="In" Type="DateTime" />
-            <Parameter Name="IznosRacuna" Mode="In" Type="Decimal" />
-            <Parameter Name="PDV" Mode="In" Type="Decimal" />
+            <Parameter Name="IznosRacuna" Mode="In" Type="Decimal" Precision="18" Scale="10"  />
+            <Parameter Name="PDV" Mode="In" Type="Decimal"  Precision="18" Scale="10" />
             <Parameter Name="Napomena" Mode="In" Type="String" />
             <Parameter Name="SkladisteID" Mode="In" Type="Int32" />
             <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
@@ -1343,7 +1332,7 @@
             <Parameter Name="UlazID" Mode="In" Type="Int32" />
             <Parameter Name="ProizvodID" Mode="In" Type="Int32" />
             <Parameter Name="Kolicina" Mode="In" Type="Int32" />
-            <Parameter Name="Cijena" Mode="In" Type="Decimal" />
+            <Parameter Name="Cijena" Mode="In" Type="Decimal" Precision="18" Scale="10"  />
           </FunctionImport>
           <FunctionImport Name="esp_Proizvodi_SelectByVrstaNaziv" ReturnType="Collection(eProdajaModel.esp_Proizvodi_SelectByVrstaNaziv_Result)">
             <Parameter Name="VrstaID" Mode="In" Type="Int32" />
@@ -1399,18 +1388,7 @@
             <Parameter Name="BrosuraID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_Proizvodi_SelectByBrosura" ReturnType="Collection(eProdajaModel.esp_Proizvodi_SelectByBrosura_Result)">
-          <Parameter Name="brosuraID" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="esp_Dobavljaci_Insert">
-            <Parameter Name="Naziv" Mode="In" Type="String" />
-            <Parameter Name="KontaktOsoba" Mode="In" Type="String" />
-            <Parameter Name="Adresa" Mode="In" Type="String" />
-            <Parameter Name="Telefon" Mode="In" Type="String" />
-            <Parameter Name="Fax" Mode="In" Type="String" />
-            <Parameter Name="Web" Mode="In" Type="String" />
-            <Parameter Name="Email" Mode="In" Type="String" />
-            <Parameter Name="ZiroRacun" Mode="In" Type="String" />
-            <Parameter Name="Napomena" Mode="In" Type="String" />
+            <Parameter Name="brosuraID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="esp_Korisnici_SelectByName_Result">
@@ -1943,7 +1921,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="esp_Dobavljaci_Insert" FunctionName="eProdajaModel.Store.esp_Dobavljaci_Insert" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
