@@ -47,14 +47,13 @@
             this.dobavljačiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administacijaDobavljačaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unosNovogDobavljačaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skladištaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izlazRobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aktivneNarudžbeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izvještajiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prodajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.korisnikLabel = new System.Windows.Forms.ToolStripLabel();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.izlazRobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktivneNarudžbeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -109,8 +108,7 @@
             this.proizvodiToolStripMenuItem,
             this.nabavkaToolStripMenuItem,
             this.brošureToolStripMenuItem1,
-            this.dobavljačiToolStripMenuItem,
-            this.skladištaToolStripMenuItem});
+            this.dobavljačiToolStripMenuItem});
             this.ulazRobeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ulazRobeToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.linedpaper32;
             this.ulazRobeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -211,6 +209,8 @@
             this.dobavljačiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administacijaDobavljačaToolStripMenuItem,
             this.unosNovogDobavljačaToolStripMenuItem});
+            this.dobavljačiToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources._512_truck;
+            this.dobavljačiToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.dobavljačiToolStripMenuItem.Name = "dobavljačiToolStripMenuItem";
             this.dobavljačiToolStripMenuItem.Size = new System.Drawing.Size(170, 38);
             this.dobavljačiToolStripMenuItem.Text = "Dobavljači";
@@ -229,11 +229,23 @@
             this.unosNovogDobavljačaToolStripMenuItem.Text = "Unos novog dobavljača";
             this.unosNovogDobavljačaToolStripMenuItem.Click += new System.EventHandler(this.unosNovogDobavljačaToolStripMenuItem_Click);
             // 
-            // skladištaToolStripMenuItem
+            // izlazRobeToolStripMenuItem
             // 
-            this.skladištaToolStripMenuItem.Name = "skladištaToolStripMenuItem";
-            this.skladištaToolStripMenuItem.Size = new System.Drawing.Size(170, 38);
-            this.skladištaToolStripMenuItem.Text = "Skladišta";
+            this.izlazRobeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aktivneNarudžbeToolStripMenuItem});
+            this.izlazRobeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic);
+            this.izlazRobeToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.message_outbox_512;
+            this.izlazRobeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.izlazRobeToolStripMenuItem.Name = "izlazRobeToolStripMenuItem";
+            this.izlazRobeToolStripMenuItem.Size = new System.Drawing.Size(124, 36);
+            this.izlazRobeToolStripMenuItem.Text = "Izlaz Robe";
+            // 
+            // aktivneNarudžbeToolStripMenuItem
+            // 
+            this.aktivneNarudžbeToolStripMenuItem.Name = "aktivneNarudžbeToolStripMenuItem";
+            this.aktivneNarudžbeToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.aktivneNarudžbeToolStripMenuItem.Text = "Aktivne narudžbe";
+            this.aktivneNarudžbeToolStripMenuItem.Click += new System.EventHandler(this.aktivneNarudžbeToolStripMenuItem_Click);
             // 
             // izvještajiToolStripMenuItem
             // 
@@ -251,7 +263,7 @@
             this.prodajaToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.boxupload32;
             this.prodajaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.prodajaToolStripMenuItem.Name = "prodajaToolStripMenuItem";
-            this.prodajaToolStripMenuItem.Size = new System.Drawing.Size(151, 38);
+            this.prodajaToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.prodajaToolStripMenuItem.Text = "Prodaja";
             this.prodajaToolStripMenuItem.Click += new System.EventHandler(this.prodajaToolStripMenuItem_Click);
             // 
@@ -278,21 +290,6 @@
             this.notifyIcon.Text = "notifyIcon";
             this.notifyIcon.Visible = true;
             this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
-            // 
-            // izlazRobeToolStripMenuItem
-            // 
-            this.izlazRobeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aktivneNarudžbeToolStripMenuItem});
-            this.izlazRobeToolStripMenuItem.Name = "izlazRobeToolStripMenuItem";
-            this.izlazRobeToolStripMenuItem.Size = new System.Drawing.Size(71, 36);
-            this.izlazRobeToolStripMenuItem.Text = "Izlaz Robe";
-            // 
-            // aktivneNarudžbeToolStripMenuItem
-            // 
-            this.aktivneNarudžbeToolStripMenuItem.Name = "aktivneNarudžbeToolStripMenuItem";
-            this.aktivneNarudžbeToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.aktivneNarudžbeToolStripMenuItem.Text = "Aktivne narudžbe";
-            this.aktivneNarudžbeToolStripMenuItem.Click += new System.EventHandler(this.aktivneNarudžbeToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -343,7 +340,6 @@
         private System.Windows.Forms.ToolStripMenuItem dobavljačiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administacijaDobavljačaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unosNovogDobavljačaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem skladištaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izlazRobeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aktivneNarudžbeToolStripMenuItem;
     }

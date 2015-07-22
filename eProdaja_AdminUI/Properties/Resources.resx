@@ -118,56 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="exchange32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exchange32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camerastar32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camerastar32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paperheart32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperheart32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="phonebook32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phonebook32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="linedpaper32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaper32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\users32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wrench32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrench32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="notepencil32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notepencil32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="monitor32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monitor32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folderminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folderminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="radio32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\radio32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gear32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gear32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpaperplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaperplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boxupload32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boxupload32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="glitter32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glitter32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="leftturnarrow32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\leftturnarrow32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpaperlock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaperlock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="upload32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\upload32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spanner32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spanner32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paperplus322" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperplus322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="speaker32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speaker32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,337 +145,373 @@
   <data name="paperstar32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paperstar32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="contactcard32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\contactcard32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="questionbook32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\questionbook32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperpencil321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperpencil321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folderplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folderplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="recycle32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\recycle32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="block32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\block32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="printer32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mouse32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mouse32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mailplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mailplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scissors32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scissors32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperheart32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperheart32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="camera32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camera32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="f" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\f.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mail32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mail32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mailblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mailblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="comment32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\comment32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="commentblack32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\commentblack32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circleleft32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circleleft32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="99" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\99.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wordpress32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpress32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperplus322" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperplus322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shield32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shield32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="leftarrow32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\leftarrow32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usersplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usersplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperplus323" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperplus323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mailopened32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mailopened32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cardgame32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cardgame32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heart32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heart32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wrench32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wrench32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="smile32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smile32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folderblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folderblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cameraminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cameraminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="article321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\article321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bak" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="phone32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phone32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="speakermute32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\speakermute32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpaperminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaperminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rss32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rss32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shieldcross32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shieldcross32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mailstar32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mailstar32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stop32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stop32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cameraplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cameraplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bargraph32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bargraph32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circleright32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circleright32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="article32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\article32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpaper32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaper32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pencil32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pencil32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sleep32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sleep32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bag32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bag32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lightbulb32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lightbulb32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wand32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wand32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pencilplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pencilplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperplus321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperplus321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plug32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plug32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="monitor32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monitor32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpaper321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaper321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="44" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\44.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boxdownload32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boxdownload32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="contactbook32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\contactbook32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unlock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unlock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paper32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paper32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unlock321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unlock321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="users321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\users321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="notecheck32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notecheck32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="orders" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orders.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cup32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cup32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpaperpencil32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaperpencil32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userplus321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userplus321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folderminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folderminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="turnright32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\turnright32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usersminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usersminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="warning32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warning32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="radio32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\radio32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperphoto32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperphoto32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\star32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save-2-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save-2-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mailminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mailminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrowright32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrowright32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="moneyreceipt32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moneyreceipt32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="slide32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slide32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpaper322" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaper322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperplus324" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperplus324.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="papercheck32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\papercheck32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usersblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usersblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="linedpapercheck32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpapercheck32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mapleleaf32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mapleleaf32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shoppingcart32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shoppingcart32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="block32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\block32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lock321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paperlock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paperlock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="papermusic32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\papermusic32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="risegraph32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\risegraph32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shoppingcart321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shoppingcart321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sleep32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sleep32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paperpencil32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paperpencil32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="melody32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\melody32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mailplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mailplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\44.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mail32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mail32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpaperlock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaperlock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="camera32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plug32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plug32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mailminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mailminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pencil32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="article32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\article32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\users321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unlock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="512_truck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\512_truck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="smile32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smile32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperplus324" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperplus324.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shieldcross32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shieldcross32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperpencil321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperpencil321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notecheck32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notecheck32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpaperminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaperminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orders.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bag32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bag32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scissors32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scissors32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="risegraph32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\risegraph32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comment32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comment32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpress32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpress32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperplus323" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperplus323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="papercheck32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papercheck32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mouse32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mouse32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paperplus325" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paperplus325.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shoppingcart321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shoppingcart321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="article321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\article321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mailstar32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mailstar32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="commentblack32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\commentblack32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folderplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folderplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="glitter32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glitter32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boxdownload32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boxdownload32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leftarrow32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leftarrow32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phonebook32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phonebook32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save-2-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save-2-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mailopened32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mailopened32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\users32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="box32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpapercheck32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpapercheck32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folderblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folderblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contactbook32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contactbook32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="99" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\99.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="camerastar32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camerastar32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exchange32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exchange32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recycle32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\recycle32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rss32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rss32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phone32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phone32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="questionbook32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\questionbook32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lightbulb32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lightbulb32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gear32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gear32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shield32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shield32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usersminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usersminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usersplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usersplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notepencil32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notepencil32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boxupload32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boxupload32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usersblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usersblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cup32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cup32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="papermusic32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papermusic32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpaperplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaperplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folder32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="speakermute32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\speakermute32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warning32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shoppingcart32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shoppingcart32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cardgame32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cardgame32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unlock321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlock321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cameraminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cameraminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melody32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melody32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spanner32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spanner32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="note32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\note32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bargraph32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bargraph32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userminus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userminus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cameraplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cameraplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpaper321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaper321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperplus321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperplus321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperlock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperlock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moneyreceipt32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moneyreceipt32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mapleleaf32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mapleleaf32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpaperpencil32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaperpencil32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mailblock32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mailblock32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circleright32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circleright32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userplus321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userplus321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pencilplus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencilplus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpaper322" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaper322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leftturnarrow32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leftturnarrow32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circleleft32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circleleft32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paperphoto32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paperphoto32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wand32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wand32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heart32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrowright32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowright32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upload32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upload32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contactcard32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contactcard32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="message-outbox-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\message-outbox-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
