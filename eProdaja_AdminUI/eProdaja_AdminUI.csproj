@@ -218,6 +218,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\AdministracijaDobavljaca.resx">
+      <DependentUpon>AdministracijaDobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NabavkaProizvoda\BrosuraForm.resx">
       <DependentUpon>BrosuraForm.cs</DependentUpon>
     </EmbeddedResource>
