@@ -11,13 +11,18 @@ namespace eProdaja_Service.Data
 {
     using System;
     
-    public partial class esp_Korisnici_SelectByName_Result
+    public partial class esp_Dobavljaci_SelectByNaziv_Result
     {
-        public int KorisnikID { get; set; }
-        public string Prezime { get; set; }
-        public string Ime { get; set; }
+        public int DobavljacID { get; set; }
+        public string Naziv { get; set; }
+        public string KontaktOsoba { get; set; }
+        public string Adresa { get; set; }
+        public string Telefon { get; set; }
+        public string Fax { get; set; }
+        public string Web { get; set; }
         public string Email { get; set; }
+        public string ZiroRacuni { get; set; }
+        public string Napomena { get; set; }
         public bool Status { get; set; }
-        public Nullable<int> BrojUloga { get; set; }
     }
 }

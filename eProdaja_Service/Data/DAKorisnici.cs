@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Data;
+using System.Data.Entity.Core;
 
 namespace eProdaja_Service.Data
 {

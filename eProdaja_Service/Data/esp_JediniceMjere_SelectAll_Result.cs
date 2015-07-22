@@ -10,18 +10,10 @@
 namespace eProdaja_Service.Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class IzlazStavke
+    public partial class esp_JediniceMjere_SelectAll_Result
     {
-        public int IzlazStavkaID { get; set; }
-        public int IzlazID { get; set; }
-        public int ProizvodID { get; set; }
-        public int Kolicina { get; set; }
-        public decimal Cijena { get; set; }
-        public Nullable<decimal> Popust { get; set; }
-    
-        public virtual Izlazi Izlazi { get; set; }
-        public virtual Proizvodi Proizvodi { get; set; }
+        public int VrstaID { get; set; }
+        public string Naziv { get; set; }
     }
 }

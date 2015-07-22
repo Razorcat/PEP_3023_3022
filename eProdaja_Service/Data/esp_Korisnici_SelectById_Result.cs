@@ -10,18 +10,17 @@
 namespace eProdaja_Service.Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class IzlazStavke
+    public partial class esp_Korisnici_SelectById_Result
     {
-        public int IzlazStavkaID { get; set; }
-        public int IzlazID { get; set; }
-        public int ProizvodID { get; set; }
-        public int Kolicina { get; set; }
-        public decimal Cijena { get; set; }
-        public Nullable<decimal> Popust { get; set; }
-    
-        public virtual Izlazi Izlazi { get; set; }
-        public virtual Proizvodi Proizvodi { get; set; }
+        public int KorisnikID { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string Email { get; set; }
+        public string Telefon { get; set; }
+        public string KorisnickoIme { get; set; }
+        public string LozinkaHash { get; set; }
+        public string LozinkaSalt { get; set; }
+        public bool Status { get; set; }
     }
 }

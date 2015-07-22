@@ -106,7 +106,7 @@ namespace eProdaja_Service.Data
 
         public static List<esp_Proizvodi_SelectByVrstaNaziv_Result> SelectByVrstaNaziv(int vrstaId, string naziv, int offset, int maxRows)
         {
-            System.Data.Objects.ObjectParameter total = new System.Data.Objects.ObjectParameter("TotalRows", 0);
+            System.Data.Entity.Core.Objects.ObjectParameter total = new System.Data.Entity.Core.Objects.ObjectParameter("TotalRows", 0);
             List<esp_Proizvodi_SelectByVrstaNaziv_Result> proizvodi = Connection.dm.esp_Proizvodi_SelectByVrstaNaziv(vrstaId, naziv, offset, maxRows, total).ToList();
 
             TotalRows = Convert.ToInt32(total.Value);

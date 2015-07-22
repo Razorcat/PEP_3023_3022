@@ -146,5 +146,32 @@ namespace eProdaja_AdminUI
             form.MdiParent = this;
             form.Show();
         }
+
+        private void administacijaDobavljačaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            NabavkaProizvoda.AdministracijaDobavljacaForm form = new NabavkaProizvoda.AdministracijaDobavljacaForm();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void unosNovogDobavljačaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            NabavkaProizvoda.NoviDobavljacForm form = new NabavkaProizvoda.NoviDobavljacForm();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void aktivneNarudžbeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Narudzbe.AktivneNarudzbeForm form = new Narudzbe.AktivneNarudzbeForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace eProdaja_AdminUI.NabavkaProizvoda
 {
-    partial class AdministracijaDobavljaca
+    partial class AdministracijaDobavljacaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -50,6 +50,7 @@
             this.txtbDobavljacNaziv.Name = "txtbDobavljacNaziv";
             this.txtbDobavljacNaziv.Size = new System.Drawing.Size(215, 20);
             this.txtbDobavljacNaziv.TabIndex = 6;
+            this.txtbDobavljacNaziv.TextChanged += new System.EventHandler(this.txtbDobavljacNaziv_TextChanged);
             // 
             // btnPromjeniStatus
             // 
@@ -59,9 +60,12 @@
             this.btnPromjeniStatus.TabIndex = 5;
             this.btnPromjeniStatus.Text = "Promjeni status";
             this.btnPromjeniStatus.UseVisualStyleBackColor = true;
+            this.btnPromjeniStatus.Click += new System.EventHandler(this.btnPromjeniStatus_Click);
             // 
             // dgvDobavljaci
             // 
+            this.dgvDobavljaci.AllowUserToAddRows = false;
+            this.dgvDobavljaci.AllowUserToDeleteRows = false;
             this.dgvDobavljaci.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -69,20 +73,27 @@
             this.dgvDobavljaci.Location = new System.Drawing.Point(12, 54);
             this.dgvDobavljaci.Name = "dgvDobavljaci";
             this.dgvDobavljaci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDobavljaci.Size = new System.Drawing.Size(337, 195);
+            this.dgvDobavljaci.Size = new System.Drawing.Size(485, 195);
             this.dgvDobavljaci.TabIndex = 4;
+            this.dgvDobavljaci.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDobavljaci_CellClick);
             // 
-            // AdministracijaDobavljaca
+            // AdministracijaDobavljacaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 261);
+            this.BackColor = System.Drawing.Color.LightPink;
+            this.ClientSize = new System.Drawing.Size(509, 261);
             this.Controls.Add(this.lblNaziv);
             this.Controls.Add(this.txtbDobavljacNaziv);
             this.Controls.Add(this.btnPromjeniStatus);
             this.Controls.Add(this.dgvDobavljaci);
-            this.Name = "AdministracijaDobavljaca";
-            this.Text = "AdministracijaDobavljaca";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AdministracijaDobavljacaForm";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Administracija dobavljača";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDobavljaci)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

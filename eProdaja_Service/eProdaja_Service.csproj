@@ -30,13 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -82,13 +85,34 @@
     <Compile Include="Data\esp_BrosureProizvodi_SelectAll_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\esp_BrosureProizvodi_SelectAll_Result1.cs">
+    <Compile Include="Data\esp_Dobavljaci_SelectById_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_Dobavljaci_SelectByNazivAll_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_Dobavljaci_SelectByNaziv_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_Izlaz_SelectByDatum_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\esp_JediniceMjere_SelectAll_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_KorisniciUloge_SelectByKorisnik_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_Korisnici_SelectById_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_Korisnici_SelectByKorisnickoIme_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\esp_Korisnici_SelectByName_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_Kupci_SelectByKorisnickoIme_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_Narudzbe_SelectAktivne_Result.cs">
@@ -97,7 +121,7 @@
     <Compile Include="Data\esp_Proizvodi_SelectByBrosura_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\esp_Proizvodi_SelectByBrosura_Result1.cs">
+    <Compile Include="Data\esp_Proizvodi_SelectById_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_Proizvodi_SelectByNaziv_Result.cs">
@@ -177,8 +201,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DM.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
     <None Include="Data\DM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
