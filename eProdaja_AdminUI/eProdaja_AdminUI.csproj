@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5431BE1D-8A0E-4DD9-A186-DD6649CC61CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eProdaja_AdminUI</RootNamespace>
+    <AssemblyName>eProdaja_AdminUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A6E5D9C2BAAAC27A89D34AD0491EA9B41149ED54</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>eProdaja_AdminUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mirror.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>eProdaja_AdminUI.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.cs" />
+    <Compile Include="Izvjestaji\ProdajaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\ProdajaForm.Designer.cs">
+      <DependentUpon>ProdajaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\NoviKorisnikForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\NoviKorisnikForm.Designer.cs">
+      <DependentUpon>NoviKorisnikForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\PretragaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\PretragaForm.Designer.cs">
+      <DependentUpon>PretragaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\PristupSistemuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\PristupSistemuForm.Designer.cs">
+      <DependentUpon>PristupSistemuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\BrosuraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\BrosuraForm.Designer.cs">
+      <DependentUpon>BrosuraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\DobavljaciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\DobavljaciForm.Designer.cs">
+      <DependentUpon>DobavljaciForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\NovaBrosuraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\NovaBrosuraForm.Designer.cs">
+      <DependentUpon>NovaBrosuraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\OdabirProizvoda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\OdabirProizvoda.Designer.cs">
+      <DependentUpon>OdabirProizvoda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\PrikazBrosuraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\PrikazBrosuraForm.Designer.cs">
+      <DependentUpon>PrikazBrosuraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\ProizvodiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\ProizvodiForm.Designer.cs">
+      <DependentUpon>ProizvodiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\StanjeSkladistaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\StanjeSkladistaForm.Designer.cs">
+      <DependentUpon>StanjeSkladistaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\VrsteProizvodaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\VrsteProizvodaForm.Designer.cs">
+      <DependentUpon>VrsteProizvodaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Narudzbe\AktivneNarudzbeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Narudzbe\AktivneNarudzbeForm.Designer.cs">
+      <DependentUpon>AktivneNarudzbeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poruke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Poruke.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NabavkaProizvoda\NabavkaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\NabavkaForm.Designer.cs">
+      <DependentUpon>NabavkaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\NoviProizvodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NabavkaProizvoda\NoviProizvodForm.Designer.cs">
+      <DependentUpon>NoviProizvodForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Izvjestaji\ProdajaForm.resx">
+      <DependentUpon>ProdajaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\ProdajaReport.rdlc" />
+    <EmbeddedResource Include="Korisnici\NoviKorisnikForm.resx">
+      <DependentUpon>NoviKorisnikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\PretragaForm.resx">
+      <DependentUpon>PretragaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\PristupSistemuForm.resx">
+      <DependentUpon>PristupSistemuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\BrosuraForm.resx">
+      <DependentUpon>BrosuraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\DobavljaciForm.resx">
+      <DependentUpon>DobavljaciForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\NovaBrosuraForm.resx">
+      <DependentUpon>NovaBrosuraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\OdabirProizvoda.resx">
+      <DependentUpon>OdabirProizvoda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\PrikazBrosuraForm.resx">
+      <DependentUpon>PrikazBrosuraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\ProizvodiForm.resx">
+      <DependentUpon>ProizvodiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\StanjeSkladistaForm.resx">
+      <DependentUpon>StanjeSkladistaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\VrsteProizvodaForm.resx">
+      <DependentUpon>VrsteProizvodaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Narudzbe\AktivneNarudzbeForm.resx">
+      <DependentUpon>AktivneNarudzbeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poruke.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Poruke.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="NabavkaProizvoda\NabavkaForm.resx">
+      <DependentUpon>NabavkaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NabavkaProizvoda\NoviProizvodForm.resx">
+      <DependentUpon>NoviProizvodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\eProdaja_Service.Data.esp_Izlaz_SelectByDatum_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowright32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\article32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bag32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bargraph32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxdownload32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxupload32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cameraminus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cameraplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camerastar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardgame32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleleft32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleright32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commentblack32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contactbook32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contactcard32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cup32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderblock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderminus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glitter32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftarrow32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftturnarrow32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightbulb32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpaper32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpapercheck32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpaperlock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpaperminus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpaperpencil32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpaperplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailblock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailminus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailopened32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailstar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapleleaf32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\melody32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moneyreceipt32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notecheck32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepencil32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papercheck32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperheart32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperlock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperminus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papermusic32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperpencil32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperphoto32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperstar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencilplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonebook32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plug32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questionbook32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\risegraph32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rss32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scissors32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shieldcross32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingcart32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slide32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smile32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spanner32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speakermute32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turnright32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userblock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userminus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userplus321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usersblock32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usersminus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usersplus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wand32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordpress32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eProdaja_Service\eProdaja_Service.csproj">
+      <Project>{91527aa9-a569-4c64-9130-c34c5d15e30a}</Project>
+      <Name>eProdaja_Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orders.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperplus321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperplus322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperplus323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperplus324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpaper321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingcart321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedpaper322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\article321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperpencil321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paperplus325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mirror.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
