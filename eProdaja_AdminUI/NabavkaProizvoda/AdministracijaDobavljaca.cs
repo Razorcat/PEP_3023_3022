@@ -14,6 +14,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
     {
         public AdministracijaDobavljaca()
         {
+            //dfef 
             InitializeComponent();
         }
     }
