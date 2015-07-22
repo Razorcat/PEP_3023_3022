@@ -13,7 +13,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
     public partial class AdministracijaDobavljaca : Form
     {
         public AdministracijaDobavljaca()
-        {///
+        {
             InitializeComponent();
         }
     }
