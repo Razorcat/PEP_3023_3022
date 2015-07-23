@@ -194,6 +194,12 @@
     <Compile Include="Narudzbe\AktivneNarudzbeForm.Designer.cs">
       <DependentUpon>AktivneNarudzbeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Narudzbe\ProdajaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Narudzbe\ProdajaForm.Designer.cs">
+      <DependentUpon>ProdajaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Poruke.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Narudzbe\AktivneNarudzbeForm.resx">
       <DependentUpon>AktivneNarudzbeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Narudzbe\ProdajaForm.resx">
+      <DependentUpon>ProdajaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Poruke.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -152,6 +152,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             vrste.Show();
         }
 
+        #region validacija
         private void vrstaList_Validating(object sender, CancelEventArgs e)
         {
             if (Convert.ToInt32(vrstaList.SelectedValue) <= 0)
@@ -196,5 +197,6 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
                 errorProvider.SetError(jedinicaMjereList, "Niste odabrali jedinicu mjere!");
             }
         }
+        #endregion
     }
 }

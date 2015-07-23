@@ -34,9 +34,8 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
         {
             if (brosuraList.SelectedIndex != 0)
             {
-
                 int brosuraId = Convert.ToInt32(brosuraList.SelectedValue);
-                proizvodiGrid.DataSource = DABrosure.GetBrosura(brosuraId);
+                proizvodiGrid.DataSource = DABrosure.GetBrosureProizvodi(brosuraId);
                 proizvodiGrid.Columns[0].Visible = false;
                 proizvodiGrid.ClearSelection();
             }

@@ -18,8 +18,7 @@ namespace eProdaja_Service.Data
 
         public static void insertBrosureProizvodi(BrosureProizvodi bp)
         {
-            Connection.dm.esp_ProizvodiBrosure_Insert(bp.ProizvodID, bp.BrosuraID);
-
+            Connection.dm.esp_ProizvodiBrosure_Insert(bp.ProizvodID, bp.BrosuraID,bp.AkcijskaCijena);
         }
 
         public static List<Brosure> SelectAll()
@@ -39,7 +38,12 @@ namespace eProdaja_Service.Data
 
             return Connection.dm.esp_Proizvodi_SelectByBrosura(brosuraId).ToList();
 
-        }        
+        }
+
+        public static List<esp_BrosureProizvodiGetByBrosuraID_Result> GetBrosureProizvodi(int BrosuraId)
+        {
+            return Connection.dm.esp_BrosureProizvodiGetByBrosuraID(BrosuraId).ToList();
+        }
 
     }
 }

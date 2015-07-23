@@ -15,6 +15,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
     public partial class BrosuraForm : Form
     {
         private Proizvodi proizvod;
+        List<BrosureProizvodi> bpList=new List<BrosureProizvodi>(); 
         public BrosuraForm()
         {
             InitializeComponent();
@@ -37,22 +38,38 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
         private void BindBrosure()
         {
-            cmbBrosura.DataSource = DAProizvodi.SelectBrosuru();
+            cmbBrosura.DataSource  = DABrosure.SelectAll();
             cmbBrosura.DisplayMember = "NazivBrosure";
             cmbBrosura.ValueMember = "BrosuraID";
         }
 
         private void BindGrid()
         {
-            proizvodiSGrid.AutoGenerateColumns = false;
+            proizvodiSGrid.ClearSelection();            
+            proizvodiSGrid.DataSource = null;   
+            proizvodiSGrid.AutoGenerateColumns = true;
             proizvodiSGrid.DataSource = DAProizvodi.SelectBrosure();
-            proizvodiSGrid.Columns[0].Visible = false;
+            proizvodiSGrid.DataSource = bpList;
+          //  proizvodiSGrid.Columns[0].Visible = true;
+            proizvodiSGrid.ClearSelection();   
         }
 
         private void BrosuraForm_Load(object sender, EventArgs e)
         {
-            BindGrid();
+            BindGridByBrosura();
             BindBrosure();
+        }
+
+        private void BindGridByBrosura()
+        {
+            List<esp_BrosureProizvodiGetByBrosuraID_Result> bpList2 =new List<esp_BrosureProizvodiGetByBrosuraID_Result>();
+            bpList2 = DABrosure.GetBrosureProizvodi(Convert.ToInt32(cmbBrosura.SelectedValue));
+            proizvodiSGrid.DataSource = null;
+            proizvodiSGrid.AutoGenerateColumns = true;
+            // proizvodiSGrid.DataSource = DAProizvodi.SelectBrosure();
+            proizvodiSGrid.DataSource = bpList2;
+            //  proizvodiSGrid.Columns[0].Visible = true;
+            proizvodiSGrid.ClearSelection();   
         }
 
         private void nazivInput_TextChanged(object sender, EventArgs e)
@@ -78,10 +95,14 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
                 if (proizvod != null)
                 {
                     BrosureProizvodi bp = new BrosureProizvodi();
+                    Brosure b=new Brosure();
                     bp.BrosuraID = Convert.ToInt32(cmbBrosura.SelectedValue);
                     bp.ProizvodID = proizvod.ProizvodID;
+                    bp.AkcijskaCijena = Convert.ToDecimal(mtxtAkcijskaCijena.Text);
+                    bp.Brosure = b;
+                    bp.Proizvodi = proizvod;
 
-                    DABrosure.insertBrosureProizvodi(bp);
+                    bpList.Add(bp);
 
                     BindGrid();
                 }
@@ -90,6 +111,19 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             else MessageBox.Show("Niste odabrali brošuru!", "Greška!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btnZakljuci_Click(object sender, EventArgs e)
+        {
+            if(bpList.Count>0)
+                foreach(BrosureProizvodi bp in bpList)
+                    DABrosure.insertBrosureProizvodi(bp);
+        }
+
+        private void cmbBrosura_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bpList = new List<BrosureProizvodi>();
+            if (cmbBrosura.SelectedIndex != 0)
+                BindGridByBrosura();   
+        }
 
     }
 }

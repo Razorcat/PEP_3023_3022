@@ -20,7 +20,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            if (nputNaziv.Text.Trim() == "")
+            if (inputNaziv.Text.Trim() == "")
                 MessageBox.Show("Unesite naziv vrste!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {

@@ -119,6 +119,10 @@ namespace eProdaja_Service.Data
             return Connection.dm.esp_Izlaz_SelectByDatum(datumOd, datumDo).ToList();
         }
 
+        public static List<esp_ProizvodiSkladiste_SelectByNazivSifra_Result> SelectByNazivSifra(string Naziv, string Sifra) {
+            return Connection.dm.esp_ProizvodiSkladiste_SelectByNazivSifra(Naziv, Sifra).ToList();
+        }
+
 
         #region Nabavka
         public static void InsertNabavka(Ulazi ulaz, List<UlazStavke> stavke)

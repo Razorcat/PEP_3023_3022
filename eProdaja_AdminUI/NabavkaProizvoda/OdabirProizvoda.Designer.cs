@@ -66,6 +66,7 @@
             this.Cijena});
             this.proizvodiGrid.Location = new System.Drawing.Point(32, 81);
             this.proizvodiGrid.Name = "proizvodiGrid";
+            this.proizvodiGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.proizvodiGrid.Size = new System.Drawing.Size(360, 222);
             this.proizvodiGrid.TabIndex = 2;
             this.proizvodiGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.proizvodiGrid_CellDoubleClick);
@@ -109,7 +110,10 @@
             this.Controls.Add(this.proizvodiGrid);
             this.Controls.Add(this.nazivInput);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "OdabirProizvoda";
+            this.ShowIcon = false;
             this.Text = "Odabir proizvoda";
             this.Load += new System.EventHandler(this.OdabirProizvoda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proizvodiGrid)).EndInit();

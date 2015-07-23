@@ -54,6 +54,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.korisnikLabel = new System.Windows.Forms.ToolStripLabel();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.novaProdajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -236,7 +237,8 @@
             // izlazRobeToolStripMenuItem
             // 
             this.izlazRobeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aktivneNarudžbeToolStripMenuItem});
+            this.aktivneNarudžbeToolStripMenuItem,
+            this.novaProdajaToolStripMenuItem});
             this.izlazRobeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic);
             this.izlazRobeToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.message_outbox_512;
             this.izlazRobeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -269,7 +271,7 @@
             this.prodajaToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.boxupload32;
             this.prodajaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.prodajaToolStripMenuItem.Name = "prodajaToolStripMenuItem";
-            this.prodajaToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.prodajaToolStripMenuItem.Size = new System.Drawing.Size(151, 38);
             this.prodajaToolStripMenuItem.Text = "Prodaja";
             this.prodajaToolStripMenuItem.Click += new System.EventHandler(this.prodajaToolStripMenuItem_Click);
             // 
@@ -296,6 +298,15 @@
             this.notifyIcon.Text = "notifyIcon";
             this.notifyIcon.Visible = true;
             this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
+            // 
+            // novaProdajaToolStripMenuItem
+            // 
+            this.novaProdajaToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.star32;
+            this.novaProdajaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.novaProdajaToolStripMenuItem.Name = "novaProdajaToolStripMenuItem";
+            this.novaProdajaToolStripMenuItem.Size = new System.Drawing.Size(218, 38);
+            this.novaProdajaToolStripMenuItem.Text = "Nova prodaja";
+            this.novaProdajaToolStripMenuItem.Click += new System.EventHandler(this.novaProdajaToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -348,6 +359,7 @@
         private System.Windows.Forms.ToolStripMenuItem unosNovogDobavljačaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izlazRobeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aktivneNarudžbeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novaProdajaToolStripMenuItem;
     }
 }
 

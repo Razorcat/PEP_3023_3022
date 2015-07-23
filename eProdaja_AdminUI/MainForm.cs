@@ -173,5 +173,14 @@ namespace eProdaja_AdminUI
             form.MdiParent = this;
             form.Show();
         }
+
+        private void novaProdajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Narudzbe.ProdajaForm form = new Narudzbe.ProdajaForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

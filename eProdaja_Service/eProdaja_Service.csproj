@@ -62,6 +62,7 @@
     <Compile Include="Data\DAKorisnici.cs" />
     <Compile Include="Data\DAKupci.cs" />
     <Compile Include="Data\DANarudzbe.cs" />
+    <Compile Include="Data\DAProdaja.cs" />
     <Compile Include="Data\DAProizvodi.cs" />
     <Compile Include="Data\DASkladista.cs" />
     <Compile Include="Data\DM.Context.cs">
@@ -80,6 +81,9 @@
       <DependentUpon>DM.edmx</DependentUpon>
     </Compile>
     <Compile Include="Data\Dobavljaci.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_BrosureProizvodiGetByBrosuraID_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_BrosureProizvodi_SelectAll_Result.cs">
@@ -116,6 +120,9 @@
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_Narudzbe_SelectAktivne_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_ProizvodiSkladiste_SelectByNazivSifra_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_Proizvodi_SelectByBrosura_Result.cs">

@@ -53,9 +53,15 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
         private void dodajStavkuButton_Click(object sender, EventArgs e)
         {
-            
-            DodajStavku();
-            BindGrid();
+            int broj;
+            int.TryParse(kolicinaInput.Text, out broj);
+
+            if (broj > 0)
+            {
+
+                DodajStavku();
+                BindGrid();
+            }
         }
 
         private void DodajStavku()
@@ -159,19 +165,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
                 e.Cancel = true;
                 errorProvider.SetError(skladisteList, "Niste odabrali skladište!");
             }
-        }
-
-        private void kolicinaInput_Validating(object sender, CancelEventArgs e)
-        {
-            int broj;
-            int.TryParse(kolicinaInput.Text, out broj);
-
-            if (broj <= 0)
-            {
-                e.Cancel = true;
-                errorProvider.SetError(kolicinaInput, "Nedozvoljena vrijednost za količinu!");
-            }
-        }
+        }       
 
   
     }

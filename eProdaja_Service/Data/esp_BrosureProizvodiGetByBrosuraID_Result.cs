@@ -10,16 +10,16 @@
 namespace eProdaja_Service.Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class BrosureProizvodi
+    public partial class esp_BrosureProizvodiGetByBrosuraID_Result
     {
-        public int BrosuraProizvodID { get; set; }
-        public int ProizvodID { get; set; }
         public int BrosuraID { get; set; }
-        public decimal AkcijskaCijena { get; set; }
-    
-        public virtual Brosure Brosure { get; set; }
-        public virtual Proizvodi Proizvodi { get; set; }
+        public int BrosuraProizvodID { get; set; }
+        public string Naziv { get; set; }
+        public decimal Cijena { get; set; }
+        public decimal Akcijska_cijena { get; set; }
+        public string Sifra { get; set; }
+        public string Vrsta { get; set; }
+        public byte[] SlikaThumb { get; set; }
     }
 }

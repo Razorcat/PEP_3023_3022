@@ -189,7 +189,6 @@
             this.kolicinaInput.Size = new System.Drawing.Size(87, 21);
             this.kolicinaInput.TabIndex = 7;
             this.kolicinaInput.Text = "000";
-            this.kolicinaInput.Validating += new System.ComponentModel.CancelEventHandler(this.kolicinaInput_Validating);
             // 
             // label12
             // 

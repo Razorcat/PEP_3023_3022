@@ -21,6 +21,7 @@
           <Property Name="BrosuraProizvodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProizvodID" Type="int" Nullable="false" />
           <Property Name="BrosuraID" Type="int" Nullable="false" />
+          <Property Name="AkcijskaCijena" Type="decimal" Precision="5" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Dobavljaci">
           <Key>
@@ -467,6 +468,9 @@
           <Parameter Name="DatumI" Type="datetime" Mode="In" />
         </Function>
         <Function Name="esp_BrosureProizvodi_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="esp_BrosureProizvodiGetByBrosuraID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BrosuraID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_Dobavljaci_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
           <Parameter Name="KontaktOsoba" Type="nvarchar" Mode="In" />
@@ -495,6 +499,26 @@
         <Function Name="esp_Izlaz_SelectByDatum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DatumOd" Type="datetime" Mode="In" />
           <Parameter Name="DatumDo" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="esp_Izlazi_GetZadnjiRacun" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="esp_Izlazi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BrojRacuna" Type="varchar" Mode="In" />
+          <Parameter Name="KorisnikID" Type="int" Mode="In" />
+          <Parameter Name="Zakljucen" Type="bit" Mode="In" />
+          <Parameter Name="IznosBezPDV" Type="decimal" Mode="In" />
+          <Parameter Name="IznosSaPDV" Type="decimal" Mode="In" />
+          <Parameter Name="SkladisteID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="esp_Izlazi_UpdateZakljucen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IzlazID" Type="int" Mode="In" />
+          <Parameter Name="Zakljucen" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="esp_IzlazStavke_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IzlazID" Type="int" Mode="In" />
+          <Parameter Name="ProizvodID" Type="int" Mode="In" />
+          <Parameter Name="Kolicina" Type="int" Mode="In" />
+          <Parameter Name="Cijena" Type="decimal" Mode="In" />
+          <Parameter Name="Popust" Type="decimal" Mode="In" />
         </Function>
         <Function Name="esp_JediniceMjere_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="esp_Korisnici_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -591,6 +615,11 @@
         <Function Name="esp_ProizvodiBrosure_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ProizvodID" Type="int" Mode="In" />
           <Parameter Name="BrosuraID" Type="int" Mode="In" />
+          <Parameter Name="AkcijskaCijena" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="esp_ProizvodiSkladiste_SelectByNazivSifra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+          <Parameter Name="Sifra" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="esp_Ulazi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="BrojFakture" Type="nvarchar" Mode="In" />
@@ -740,6 +769,7 @@
           <Property Name="BrosuraID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Brosure" Relationship="Self.FK_BrosureProizvodi_Brosure" FromRole="BrosureProizvodi" ToRole="Brosure" />
           <NavigationProperty Name="Proizvodi" Relationship="Self.FK_BrosureProizvodiProizvodi" FromRole="BrosureProizvodi" ToRole="Proizvodi" />
+          <Property Name="AkcijskaCijena" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
         </EntityType>
         <EntityType Name="Dobavljaci">
           <Key>
@@ -1446,6 +1476,7 @@
           <FunctionImport Name="esp_ProizvodiBrosure_Insert">
             <Parameter Name="ProizvodID" Mode="In" Type="Int32" />
             <Parameter Name="BrosuraID" Mode="In" Type="Int32" />
+            <Parameter Name="AkcijskaCijena" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="esp_Ulazi_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="BrojFakture" Mode="In" Type="String" />
@@ -1472,8 +1503,35 @@
             <Parameter Name="Status" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="esp_Dobavljaci_SelectByNazivAll" EntitySet="Dobavljaci" ReturnType="Collection(Model.Dobavljaci)">
-            <Parameter Name="Naziv" Mode="In" Type="String" />
+          <Parameter Name="Naziv" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="esp_BrosureProizvodiGetByBrosuraID" ReturnType="Collection(Model.esp_BrosureProizvodiGetByBrosuraID_Result)">
+          <Parameter Name="BrosuraID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_ProizvodiSkladiste_SelectByNazivSifra" ReturnType="Collection(Model.esp_ProizvodiSkladiste_SelectByNazivSifra_Result)">
+            <Parameter Name="Naziv" Mode="In" Type="String" />
+            <Parameter Name="Sifra" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Izlazi_Insert" ReturnType="Collection(Decimal)">
+            <Parameter Name="BrojRacuna" Mode="In" Type="String" />
+            <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+            <Parameter Name="Zakljucen" Mode="In" Type="Boolean" />
+            <Parameter Name="IznosBezPDV" Mode="In" Type="Decimal" />
+            <Parameter Name="IznosSaPDV" Mode="In" Type="Decimal" />
+            <Parameter Name="SkladisteID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Izlazi_UpdateZakljucen">
+            <Parameter Name="IzlazID" Mode="In" Type="Int32" />
+            <Parameter Name="Zakljucen" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="esp_IzlazStavke_Insert">
+            <Parameter Name="IzlazID" Mode="In" Type="Int32" />
+            <Parameter Name="ProizvodID" Mode="In" Type="Int32" />
+            <Parameter Name="Kolicina" Mode="In" Type="Int32" />
+            <Parameter Name="Cijena" Mode="In" Type="Decimal" />
+            <Parameter Name="Popust" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Izlazi_GetZadnjiRacun" ReturnType="Collection(String)" />
         </EntityContainer>
         <ComplexType Name="esp_BrosureProizvodi_SelectAll_Result">
           <Property Type="String" Name="NazivBrosure" Nullable="false" MaxLength="100" />
@@ -1658,6 +1716,24 @@
           <Property Type="String" Name="Napomena" Nullable="true" MaxLength="500" />
           <Property Type="Boolean" Name="Status" Nullable="false" />
         </ComplexType>
+        <ComplexType Name="esp_BrosureProizvodiGetByBrosuraID_Result">
+          <Property Type="Int32" Name="BrosuraID" Nullable="false" />
+          <Property Type="Int32" Name="BrosuraProizvodID" Nullable="false" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="5" Scale="2" />
+          <Property Type="Decimal" Name="Akcijska_cijena" Nullable="false" Precision="5" Scale="2" />
+          <Property Type="String" Name="Sifra" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Vrsta" Nullable="false" MaxLength="50" />
+          <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="esp_ProizvodiSkladiste_SelectByNazivSifra_Result">
+          <Property Type="Int32" Name="ProizvodID" Nullable="false" />
+          <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sifra" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="5" Scale="2" />
+          <Property Type="Int32" Name="Kolicina" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1677,6 +1753,7 @@
           <EntitySetMapping Name="BrosureProizvodi">
             <EntityTypeMapping TypeName="Model.BrosureProizvodi">
               <MappingFragment StoreEntitySet="BrosureProizvodi">
+                <ScalarProperty Name="AkcijskaCijena" ColumnName="AkcijskaCijena" />
                 <ScalarProperty Name="BrosuraProizvodID" ColumnName="BrosuraProizvodID" />
                 <ScalarProperty Name="ProizvodID" ColumnName="ProizvodID" />
                 <ScalarProperty Name="BrosuraID" ColumnName="BrosuraID" />
@@ -2061,6 +2138,36 @@
           <FunctionImportMapping FunctionImportName="esp_Dobavljaci_UpdateStatus" FunctionName="Model.Store.esp_Dobavljaci_UpdateStatus" />
           <FunctionImportMapping FunctionImportName="esp_Dobavljaci_SelectByNazivAll" FunctionName="Model.Store.esp_Dobavljaci_SelectByNazivAll">
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_BrosureProizvodiGetByBrosuraID" FunctionName="Model.Store.esp_BrosureProizvodiGetByBrosuraID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.esp_BrosureProizvodiGetByBrosuraID_Result">
+                <ScalarProperty Name="BrosuraID" ColumnName="BrosuraID" />
+                <ScalarProperty Name="BrosuraProizvodID" ColumnName="BrosuraProizvodID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+                <ScalarProperty Name="Akcijska_cijena" ColumnName="Akcijska cijena" />
+                <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+                <ScalarProperty Name="Vrsta" ColumnName="Vrsta" />
+                <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_ProizvodiSkladiste_SelectByNazivSifra" FunctionName="Model.Store.esp_ProizvodiSkladiste_SelectByNazivSifra">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.esp_ProizvodiSkladiste_SelectByNazivSifra_Result">
+                <ScalarProperty Name="ProizvodID" ColumnName="ProizvodID" />
+                <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+                <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+                <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Izlazi_Insert" FunctionName="Model.Store.esp_Izlazi_Insert" />
+          <FunctionImportMapping FunctionImportName="esp_Izlazi_UpdateZakljucen" FunctionName="Model.Store.esp_Izlazi_UpdateZakljucen" />
+          <FunctionImportMapping FunctionImportName="esp_IzlazStavke_Insert" FunctionName="Model.Store.esp_IzlazStavke_Insert" />
+          <FunctionImportMapping FunctionImportName="esp_Izlazi_GetZadnjiRacun" FunctionName="Model.Store.esp_Izlazi_GetZadnjiRacun" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
