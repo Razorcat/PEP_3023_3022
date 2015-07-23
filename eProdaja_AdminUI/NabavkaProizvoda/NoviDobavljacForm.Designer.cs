@@ -90,6 +90,7 @@
             this.mtxtbTelefon.Name = "mtxtbTelefon";
             this.mtxtbTelefon.Size = new System.Drawing.Size(146, 20);
             this.mtxtbTelefon.TabIndex = 17;
+            this.mtxtbTelefon.Validating += new System.ComponentModel.CancelEventHandler(this.mtxtbTelefon_Validating);
             // 
             // txtbZiroRacun
             // 
@@ -122,6 +123,7 @@
             this.txtbAdresa.Name = "txtbAdresa";
             this.txtbAdresa.Size = new System.Drawing.Size(146, 20);
             this.txtbAdresa.TabIndex = 16;
+            this.txtbAdresa.Validating += new System.ComponentModel.CancelEventHandler(this.txtbAdresa_Validating);
             // 
             // txtbKontaktOsoba
             // 
@@ -221,7 +223,7 @@
             this.lblNaziv.TabIndex = 12;
             this.lblNaziv.Text = "Naziv :";
             // 
-            // NoviDobavljac
+            // NoviDobavljacForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,7 +251,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "NoviDobavljac";
+            this.Name = "NoviDobavljacForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Novi dobavljač";

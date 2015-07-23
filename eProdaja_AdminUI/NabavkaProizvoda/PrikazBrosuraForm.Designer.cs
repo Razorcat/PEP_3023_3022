@@ -76,7 +76,11 @@
             this.Controls.Add(this.proizvodiGrid);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.brosuraList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PrikazBrosuraForm";
+            this.ShowIcon = false;
             this.Text = "Brošure";
             this.Load += new System.EventHandler(this.PrikazBrosuraForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proizvodiGrid)).EndInit();

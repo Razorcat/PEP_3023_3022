@@ -20,6 +20,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
         public NoviProizvodForm()
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
         }
 
         private void NoviProizvodForm_Load(object sender, EventArgs e)
@@ -46,28 +47,31 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
         private void dodajButton_Click(object sender, EventArgs e)
         {
-            try
+            if (this.ValidateChildren(ValidationConstraints.Enabled))
             {
-                if (proizvod == null)
-                    proizvod = new Proizvodi();
+                try
+                {
+                    if (proizvod == null)
+                        proizvod = new Proizvodi();
 
-                if (vrstaList.SelectedIndex > 0)
-                    proizvod.VrstaID = Convert.ToInt32(vrstaList.SelectedValue);
+                    if (vrstaList.SelectedIndex > 0)
+                        proizvod.VrstaID = Convert.ToInt32(vrstaList.SelectedValue);
 
-                if (jedinicaMjereList.SelectedIndex > 0)
-                    proizvod.JedinicaMjereID = Convert.ToInt32(jedinicaMjereList.SelectedValue);
+                    if (jedinicaMjereList.SelectedIndex > 0)
+                        proizvod.JedinicaMjereID = Convert.ToInt32(jedinicaMjereList.SelectedValue);
 
-                proizvod.Sifra = sifraInput.Text;
-                proizvod.Naziv = nazivInput.Text;
-                proizvod.Cijena = Convert.ToDecimal(cijenaInput.Text);
+                    proizvod.Sifra = sifraInput.Text;
+                    proizvod.Naziv = nazivInput.Text;
+                    proizvod.Cijena = Convert.ToDecimal(cijenaInput.Text);
 
-                DAProizvodi.Insert(proizvod);
-                BindGrid();
-                clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DAProizvodi.Insert(proizvod);
+                    BindGrid();
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -146,6 +150,51 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
             NabavkaProizvoda.VrsteProizvodaForm vrste= new NabavkaProizvoda.VrsteProizvodaForm();
             vrste.Show();
+        }
+
+        private void vrstaList_Validating(object sender, CancelEventArgs e)
+        {
+            if (Convert.ToInt32(vrstaList.SelectedValue) <= 0)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(vrstaList, "Niste odabrali vrstu proizvoda!");
+            }
+        }
+
+        private void sifraInput_Validating(object sender, CancelEventArgs e)
+        {
+            if (sifraInput.Text.Trim()=="")
+            {
+                e.Cancel = true;
+                errorProvider.SetError(sifraInput, "Niste unijeli šifru proizvoda!");
+            }
+        }
+
+        private void nazivInput_Validating(object sender, CancelEventArgs e)
+        {
+            if (nazivInput.Text.Trim() == "")
+            {
+                e.Cancel = true;
+                errorProvider.SetError(nazivInput, "Niste unijeli naziv proizvoda!");
+            }
+        }
+
+        private void cijenaInput_Validating(object sender, CancelEventArgs e)
+        {
+            if (cijenaInput.Text.Trim() == "")
+            {
+                e.Cancel = true;
+                errorProvider.SetError(nazivInput, "Niste unijeli cijenu proizvoda!");
+            }
+        }
+
+        private void jedinicaMjereList_Validating(object sender, CancelEventArgs e)
+        {
+            if (Convert.ToInt32(jedinicaMjereList.SelectedValue) <= 0)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(jedinicaMjereList, "Niste odabrali jedinicu mjere!");
+            }
         }
     }
 }

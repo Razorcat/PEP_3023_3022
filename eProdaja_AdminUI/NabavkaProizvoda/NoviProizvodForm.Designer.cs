@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cijenaInput = new System.Windows.Forms.MaskedTextBox();
             this.dodajButton = new System.Windows.Forms.Button();
             this.proizvodiGrid = new System.Windows.Forms.DataGridView();
@@ -46,8 +47,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.proizvodiGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // cijenaInput
@@ -55,8 +58,9 @@
             this.cijenaInput.Location = new System.Drawing.Point(104, 91);
             this.cijenaInput.Mask = "0000.00";
             this.cijenaInput.Name = "cijenaInput";
-            this.cijenaInput.Size = new System.Drawing.Size(65, 20);
+            this.cijenaInput.Size = new System.Drawing.Size(53, 20);
             this.cijenaInput.TabIndex = 4;
+            this.cijenaInput.Validating += new System.ComponentModel.CancelEventHandler(this.cijenaInput_Validating);
             // 
             // dodajButton
             // 
@@ -88,11 +92,11 @@
             // 
             // dodajSlikuButton
             // 
-            this.dodajSlikuButton.Location = new System.Drawing.Point(319, 135);
+            this.dodajSlikuButton.Location = new System.Drawing.Point(339, 135);
             this.dodajSlikuButton.Name = "dodajSlikuButton";
-            this.dodajSlikuButton.Size = new System.Drawing.Size(51, 23);
+            this.dodajSlikuButton.Size = new System.Drawing.Size(96, 23);
             this.dodajSlikuButton.TabIndex = 5;
-            this.dodajSlikuButton.Text = "Dodaj";
+            this.dodajSlikuButton.Text = "Učitaj sliku";
             this.dodajSlikuButton.UseVisualStyleBackColor = true;
             this.dodajSlikuButton.Click += new System.EventHandler(this.dodajSlikuButton_Click);
             // 
@@ -132,6 +136,7 @@
             this.jedinicaMjereList.Name = "jedinicaMjereList";
             this.jedinicaMjereList.Size = new System.Drawing.Size(65, 21);
             this.jedinicaMjereList.TabIndex = 5;
+            this.jedinicaMjereList.Validating += new System.ComponentModel.CancelEventHandler(this.jedinicaMjereList_Validating);
             // 
             // label5
             // 
@@ -152,6 +157,7 @@
             this.vrstaList.Size = new System.Drawing.Size(209, 21);
             this.vrstaList.TabIndex = 1;
             this.vrstaList.SelectedIndexChanged += new System.EventHandler(this.vrstaList_SelectedIndexChanged);
+            this.vrstaList.Validating += new System.ComponentModel.CancelEventHandler(this.vrstaList_Validating);
             // 
             // label4
             // 
@@ -181,6 +187,7 @@
             this.nazivInput.Name = "nazivInput";
             this.nazivInput.Size = new System.Drawing.Size(209, 20);
             this.nazivInput.TabIndex = 3;
+            this.nazivInput.Validating += new System.ComponentModel.CancelEventHandler(this.nazivInput_Validating);
             // 
             // label2
             // 
@@ -199,6 +206,7 @@
             this.sifraInput.Name = "sifraInput";
             this.sifraInput.Size = new System.Drawing.Size(209, 20);
             this.sifraInput.TabIndex = 2;
+            this.sifraInput.Validating += new System.ComponentModel.CancelEventHandler(this.sifraInput_Validating);
             // 
             // label1
             // 
@@ -217,13 +225,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(319, 15);
+            this.button1.Location = new System.Drawing.Point(339, 15);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 23);
+            this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 34;
-            this.button1.Text = "Dodaj";
+            this.button1.Text = "Dodaj novu vrstu";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // NoviProizvodForm
             // 
@@ -255,6 +267,7 @@
             this.Load += new System.EventHandler(this.NoviProizvodForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.proizvodiGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +293,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

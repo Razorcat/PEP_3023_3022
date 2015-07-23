@@ -96,28 +96,33 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
         }
 
         private void zakljuciButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Ulazi ulaz = new Ulazi();
-                ulaz.DobavljacID = dobavljac.DobavljacID;
-                ulaz.KorisnikID = Global.prijavljeniKorisnik.KorisnikID;
-                if (skladisteList.SelectedIndex != 0)
-                    ulaz.SkladisteID = Convert.ToInt32(skladisteList.SelectedValue);
-                ulaz.BrojFakture = brojFaktureInput.Text;
-                ulaz.Datum = datumDatePicker.Value;
-                ulaz.Napomena = napomenaInput.Text;
-                ulaz.IznosRacuna = iznos + pdv;
-                ulaz.PDV = pdv;
+        {           
+            if (this.ValidateChildren(ValidationConstraints.Enabled))
+                {
+                    try
+                    {
+                        Ulazi ulaz = new Ulazi();
+                        ulaz.DobavljacID = dobavljac.DobavljacID;
+                        ulaz.KorisnikID = Global.prijavljeniKorisnik.KorisnikID;
+                        if (skladisteList.SelectedIndex != 0)
+                            ulaz.SkladisteID = Convert.ToInt32(skladisteList.SelectedValue);
+                        ulaz.BrojFakture = brojFaktureInput.Text;
+                        ulaz.Datum = datumDatePicker.Value;
+                        ulaz.Napomena = napomenaInput.Text;
+                        ulaz.IznosRacuna = iznos + pdv;
+                        ulaz.PDV = pdv;
 
-                DAProizvodi.InsertNabavka(ulaz, stavke);
-                MessageBox.Show(Global.GetString("ulaz_succ"), "Nabavka robe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                        DAProizvodi.InsertNabavka(ulaz, stavke);
+                        MessageBox.Show(Global.GetString("ulaz_succ"), "Nabavka robe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            
+
         }
 
         private void cijenaInput_KeyPress(object sender, KeyPressEventArgs e)
@@ -126,6 +131,45 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             {
                 DodajStavku();
                 BindGrid();
+            }
+        }
+
+        private void brojFaktureInput_Validating(object sender, CancelEventArgs e)
+        {
+            if (brojFaktureInput.Text.Trim()=="")
+            {
+                e.Cancel = true;
+                errorProvider.SetError(brojFaktureInput, "Broj fakture ne može biti prazno polje!");
+            }            
+        }
+
+        private void nazivDInput_Validating(object sender, CancelEventArgs e)
+        {
+            if (dobavljac==null)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(nazivDInput, "Niste odabrali dobavljača!");
+            }
+        }
+
+        private void skladisteList_Validating(object sender, CancelEventArgs e)
+        {
+            if (Convert.ToInt32(skladisteList.SelectedValue)<=0)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(skladisteList, "Niste odabrali skladište!");
+            }
+        }
+
+        private void kolicinaInput_Validating(object sender, CancelEventArgs e)
+        {
+            int broj;
+            int.TryParse(kolicinaInput.Text, out broj);
+
+            if (broj <= 0)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(kolicinaInput, "Nedozvoljena vrijednost za količinu!");
             }
         }
 

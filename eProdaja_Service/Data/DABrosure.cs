@@ -22,10 +22,8 @@ namespace eProdaja_Service.Data
 
         }
 
-
         public static List<Brosure> SelectAll()
         {
-
             List<Brosure> brosure = Connection.dm.Brosure.OrderBy(x => x.NazivBrosure).ToList();
 
             Brosure empty = new Brosure();
@@ -34,17 +32,14 @@ namespace eProdaja_Service.Data
             brosure.Insert(0, empty);
 
             return brosure;
-
         }
-
 
         public static List<esp_Proizvodi_SelectByBrosura_Result> GetBrosura(int brosuraId)
         {
 
             return Connection.dm.esp_Proizvodi_SelectByBrosura(brosuraId).ToList();
 
-        }
-        
+        }        
 
     }
 }

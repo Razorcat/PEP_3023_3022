@@ -34,10 +34,10 @@
             this.nazivInput = new System.Windows.Forms.TextBox();
             this.sifraInput = new System.Windows.Forms.TextBox();
             this.cijenaInput = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOdaberiProizvod = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbBrosura = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDodaj = new System.Windows.Forms.Button();
             this.proizvodiSGrid = new System.Windows.Forms.DataGridView();
             this.NazivBrosure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,24 +100,24 @@
             this.cijenaInput.Size = new System.Drawing.Size(158, 20);
             this.cijenaInput.TabIndex = 5;
             // 
-            // button1
+            // btnOdaberiProizvod
             // 
-            this.button1.Location = new System.Drawing.Point(32, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Odaberite proizvod";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOdaberiProizvod.Location = new System.Drawing.Point(32, 12);
+            this.btnOdaberiProizvod.Name = "btnOdaberiProizvod";
+            this.btnOdaberiProizvod.Size = new System.Drawing.Size(217, 38);
+            this.btnOdaberiProizvod.TabIndex = 6;
+            this.btnOdaberiProizvod.Text = "Odaberite proizvod";
+            this.btnOdaberiProizvod.UseVisualStyleBackColor = true;
+            this.btnOdaberiProizvod.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(325, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Brošura";
+            this.label4.Text = "Brošura:";
             // 
             // cmbBrosura
             // 
@@ -127,15 +127,15 @@
             this.cmbBrosura.Size = new System.Drawing.Size(154, 21);
             this.cmbBrosura.TabIndex = 8;
             // 
-            // button3
+            // btnDodaj
             // 
-            this.button3.Location = new System.Drawing.Point(376, 372);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Dodaj";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnDodaj.Location = new System.Drawing.Point(376, 355);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(152, 40);
+            this.btnDodaj.TabIndex = 10;
+            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.button3_Click);
             // 
             // proizvodiSGrid
             // 
@@ -191,11 +191,11 @@
             this.BackColor = System.Drawing.Color.LightPink;
             this.ClientSize = new System.Drawing.Size(551, 407);
             this.Controls.Add(this.proizvodiSGrid);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbBrosura);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOdaberiProizvod);
             this.Controls.Add(this.cijenaInput);
             this.Controls.Add(this.sifraInput);
             this.Controls.Add(this.nazivInput);
@@ -220,11 +220,11 @@
         private System.Windows.Forms.TextBox nazivInput;
         private System.Windows.Forms.TextBox sifraInput;
         private System.Windows.Forms.TextBox cijenaInput;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOdaberiProizvod;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbBrosura;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.DataGridView proizvodiSGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn NazivBrosure;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;

@@ -28,11 +28,6 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             brosuraList.DataSource = DABrosure.SelectAll();
             brosuraList.DisplayMember = "NazivBrosure";
             brosuraList.ValueMember = "BrosuraID";
-
-
-
-
-
         }
 
         private void brosuraList_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,11 +44,6 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             else
                 proizvodiGrid.DataSource = null;
         }
-
-
-
-
-
 
     }
 }

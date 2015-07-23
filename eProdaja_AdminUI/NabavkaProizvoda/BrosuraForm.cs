@@ -73,13 +73,21 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
         private void button3_Click(object sender, EventArgs e)
         {
-            BrosureProizvodi bp = new BrosureProizvodi();
-            bp.BrosuraID = Convert.ToInt32(cmbBrosura.SelectedValue);
-            bp.ProizvodID = proizvod.ProizvodID;
+            if (Convert.ToInt32(cmbBrosura.SelectedValue) != 0)
+            {
+                if (proizvod != null)
+                {
+                    BrosureProizvodi bp = new BrosureProizvodi();
+                    bp.BrosuraID = Convert.ToInt32(cmbBrosura.SelectedValue);
+                    bp.ProizvodID = proizvod.ProizvodID;
 
-            DABrosure.insertBrosureProizvodi(bp);
+                    DABrosure.insertBrosureProizvodi(bp);
 
-            BindGrid();
+                    BindGrid();
+                }
+                else MessageBox.Show("Niste odabrali proizvod!", "Greška!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else MessageBox.Show("Niste odabrali brošuru!", "Greška!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 

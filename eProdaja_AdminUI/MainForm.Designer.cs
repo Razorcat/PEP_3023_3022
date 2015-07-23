@@ -217,15 +217,19 @@
             // 
             // administacijaDobavljačaToolStripMenuItem
             // 
+            this.administacijaDobavljačaToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.users321;
+            this.administacijaDobavljačaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.administacijaDobavljačaToolStripMenuItem.Name = "administacijaDobavljačaToolStripMenuItem";
-            this.administacijaDobavljačaToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.administacijaDobavljačaToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
             this.administacijaDobavljačaToolStripMenuItem.Text = "Administacija dobavljača";
             this.administacijaDobavljačaToolStripMenuItem.Click += new System.EventHandler(this.administacijaDobavljačaToolStripMenuItem_Click);
             // 
             // unosNovogDobavljačaToolStripMenuItem
             // 
+            this.unosNovogDobavljačaToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.userplus32;
+            this.unosNovogDobavljačaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.unosNovogDobavljačaToolStripMenuItem.Name = "unosNovogDobavljačaToolStripMenuItem";
-            this.unosNovogDobavljačaToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
+            this.unosNovogDobavljačaToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
             this.unosNovogDobavljačaToolStripMenuItem.Text = "Unos novog dobavljača";
             this.unosNovogDobavljačaToolStripMenuItem.Click += new System.EventHandler(this.unosNovogDobavljačaToolStripMenuItem_Click);
             // 
@@ -242,8 +246,10 @@
             // 
             // aktivneNarudžbeToolStripMenuItem
             // 
+            this.aktivneNarudžbeToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.article32;
+            this.aktivneNarudžbeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aktivneNarudžbeToolStripMenuItem.Name = "aktivneNarudžbeToolStripMenuItem";
-            this.aktivneNarudžbeToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.aktivneNarudžbeToolStripMenuItem.Size = new System.Drawing.Size(218, 38);
             this.aktivneNarudžbeToolStripMenuItem.Text = "Aktivne narudžbe";
             this.aktivneNarudžbeToolStripMenuItem.Click += new System.EventHandler(this.aktivneNarudžbeToolStripMenuItem_Click);
             // 

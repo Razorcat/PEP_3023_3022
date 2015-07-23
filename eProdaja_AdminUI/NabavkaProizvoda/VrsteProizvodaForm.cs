@@ -20,14 +20,18 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            eProdaja_Service.Data.VrsteProizvoda vrste = new eProdaja_Service.Data.VrsteProizvoda();
-            vrste.Naziv = inputNaziv.Text.Trim();
+            if (nputNaziv.Text.Trim() == "")
+                MessageBox.Show("Unesite naziv vrste!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                eProdaja_Service.Data.VrsteProizvoda vrste = new eProdaja_Service.Data.VrsteProizvoda();
+                vrste.Naziv = inputNaziv.Text.Trim();
 
-            DAProizvodi.VrsteProizvodaInsert(vrste);
-            MessageBox.Show(Global.GetString("insert_succ"), "Uspješno ste dodali vrstu proizvoda",
-                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();  
-            
+                DAProizvodi.VrsteProizvodaInsert(vrste);
+                MessageBox.Show(Global.GetString("insert_succ"), "Uspješno ste dodali vrstu proizvoda",
+                                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }            
         }
     }
 }

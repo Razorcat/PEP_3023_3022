@@ -68,7 +68,25 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
         {
             if (txtbNaziv.Text.Trim() == "") {
                 e.Cancel = true;
-                errorProvider.SetError(txtbNaziv, "Naziv dobavljaca ne može biti prazno!");
+                errorProvider.SetError(txtbNaziv, "Naziv dobavljača ne može biti prazno polje!");
+            }
+        }
+
+        private void txtbAdresa_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtbAdresa.Text.Trim() == "")
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtbAdresa, "Adresa dobavljača ne može biti prazno polje!");
+            }
+        }
+
+        private void mtxtbTelefon_Validating(object sender, CancelEventArgs e)
+        {
+            if (mtxtbTelefon.Text.Trim() == "")
+            {
+                e.Cancel = true;
+                errorProvider.SetError(mtxtbTelefon, "Telefon dobavljača ne može biti prazno polje!");
             }
         }
     

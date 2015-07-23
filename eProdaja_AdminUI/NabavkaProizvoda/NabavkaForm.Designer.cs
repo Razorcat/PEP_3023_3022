@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.zakljuciButton = new System.Windows.Forms.Button();
             this.stavkeGrid = new System.Windows.Forms.DataGridView();
@@ -63,10 +64,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -186,6 +189,7 @@
             this.kolicinaInput.Size = new System.Drawing.Size(87, 21);
             this.kolicinaInput.TabIndex = 7;
             this.kolicinaInput.Text = "000";
+            this.kolicinaInput.Validating += new System.ComponentModel.CancelEventHandler(this.kolicinaInput_Validating);
             // 
             // label12
             // 
@@ -337,6 +341,7 @@
             this.brojFaktureInput.Name = "brojFaktureInput";
             this.brojFaktureInput.Size = new System.Drawing.Size(217, 21);
             this.brojFaktureInput.TabIndex = 3;
+            this.brojFaktureInput.Validating += new System.ComponentModel.CancelEventHandler(this.brojFaktureInput_Validating);
             // 
             // label5
             // 
@@ -357,6 +362,7 @@
             this.skladisteList.Name = "skladisteList";
             this.skladisteList.Size = new System.Drawing.Size(217, 23);
             this.skladisteList.TabIndex = 2;
+            this.skladisteList.Validating += new System.ComponentModel.CancelEventHandler(this.skladisteList_Validating);
             // 
             // label4
             // 
@@ -392,7 +398,7 @@
             this.pretragaDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.pretragaDButton.ForeColor = System.Drawing.Color.Black;
             this.pretragaDButton.Image = global::eProdaja_AdminUI.Properties.Resources.search32;
-            this.pretragaDButton.Location = new System.Drawing.Point(336, 97);
+            this.pretragaDButton.Location = new System.Drawing.Point(336, 108);
             this.pretragaDButton.Name = "pretragaDButton";
             this.pretragaDButton.Size = new System.Drawing.Size(111, 47);
             this.pretragaDButton.TabIndex = 1;
@@ -430,6 +436,7 @@
             this.nazivDInput.Size = new System.Drawing.Size(217, 21);
             this.nazivDInput.TabIndex = 0;
             this.nazivDInput.TabStop = false;
+            this.nazivDInput.Validating += new System.ComponentModel.CancelEventHandler(this.nazivDInput_Validating);
             // 
             // label3
             // 
@@ -438,7 +445,7 @@
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(15, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefon:";
             // 
@@ -464,12 +471,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Naziv:";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // NabavkaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightPink;
-            this.ClientSize = new System.Drawing.Size(1122, 515);
+            this.ClientSize = new System.Drawing.Size(1122, 490);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -485,6 +496,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,5 +538,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
