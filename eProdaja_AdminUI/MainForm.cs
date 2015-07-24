@@ -182,5 +182,14 @@ namespace eProdaja_AdminUI
             form.MdiParent = this;
             form.Show();
         }
+
+        private void racunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Izvjestaji.RacunForm form = new Izvjestaji.RacunForm(4);
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

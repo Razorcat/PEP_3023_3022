@@ -164,15 +164,14 @@ namespace eProdaja_AdminUI.Narudzbe
                 MessageBox.Show("Uspješno ste zaključili prodaju", "Prodaja info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
-                // report za rečun
-                /*
+                // report za račun                
                 if (IzlazId > 0)
                 {
-                    frmReportRacunById rpt = new frmReportRacunById(IzlazId);
+                    Izvjestaji.RacunForm rpt = new Izvjestaji.RacunForm(IzlazId);
                     rpt.Show();
                     rpt.WindowState = FormWindowState.Normal;
                 }
-                 */
+                 
             }
             else MessageBox.Show("Imate prazna polja", "Prodaja info", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

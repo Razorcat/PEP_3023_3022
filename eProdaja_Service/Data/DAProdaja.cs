@@ -32,5 +32,9 @@ namespace eProdaja_Service.Data
         public static string GetZadnjiRacun() {
             return Connection.dm.esp_Izlazi_GetZadnjiRacun().First().ToString();
         }
+        public static List<esp_GetRacunByIzlazID_Result1> GetRacun(int IzlazId) {
+            return Connection.dm.esp_GetRacunByIzlazID(IzlazId).ToList();
+        }
+
     }
 }

@@ -727,5 +727,14 @@ namespace eProdaja_Service.Data
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("esp_Izlazi_GetZadnjiRacun");
         }
+    
+        public virtual ObjectResult<esp_GetRacunByIzlazID_Result1> esp_GetRacunByIzlazID(Nullable<int> izlazID)
+        {
+            var izlazIDParameter = izlazID.HasValue ?
+                new ObjectParameter("IzlazID", izlazID) :
+                new ObjectParameter("IzlazID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<esp_GetRacunByIzlazID_Result1>("esp_GetRacunByIzlazID", izlazIDParameter);
+        }
     }
 }

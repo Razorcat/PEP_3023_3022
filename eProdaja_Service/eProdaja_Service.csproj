@@ -98,6 +98,15 @@
     <Compile Include="Data\esp_Dobavljaci_SelectByNaziv_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\esp_GetRacunByIzlazID_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_GetRacunByIzlazID_Result1.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_GetRacunByIzlazID_Result2.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\esp_Izlaz_SelectByDatum_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
@@ -223,6 +232,8 @@
       <LastGenOutput>DM.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\eProdaja_Service.Data.esp_GetRacunByIzlazID_Result.datasource" />
+    <None Include="Properties\DataSources\eProdaja_Service.Data.esp_GetRacunByIzlazID_Result1.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

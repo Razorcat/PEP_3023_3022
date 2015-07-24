@@ -98,6 +98,12 @@
     <Compile Include="Izvjestaji\ProdajaForm.Designer.cs">
       <DependentUpon>ProdajaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Izvjestaji\RacunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\RacunForm.Designer.cs">
+      <DependentUpon>RacunForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Korisnici\NoviKorisnikForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,10 @@
       <DependentUpon>ProdajaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Izvjestaji\ProdajaReport.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\RacunForm.resx">
+      <DependentUpon>RacunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\RacunReport.rdlc" />
     <EmbeddedResource Include="Korisnici\NoviKorisnikForm.resx">
       <DependentUpon>NoviKorisnikForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +305,9 @@
       <DependentUpon>NoviProizvodForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\eProdaja_Service.Data.esp_GetRacunByIzlazID_Result.datasource" />
+    <None Include="Properties\DataSources\eProdaja_Service.Data.esp_GetRacunByIzlazID_Result1.datasource" />
+    <None Include="Properties\DataSources\eProdaja_Service.Data.esp_GetRacunByIzlazID_Result2.datasource" />
     <None Include="Properties\DataSources\eProdaja_Service.Data.esp_Izlaz_SelectByDatum_Result.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

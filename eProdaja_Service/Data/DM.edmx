@@ -496,6 +496,9 @@
           <Parameter Name="DobavljacID" Type="int" Mode="In" />
           <Parameter Name="Status" Type="bit" Mode="In" />
         </Function>
+        <Function Name="esp_GetRacunByIzlazID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IzlazID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_Izlaz_SelectByDatum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DatumOd" Type="datetime" Mode="In" />
           <Parameter Name="DatumDo" Type="datetime" Mode="In" />
@@ -1532,6 +1535,9 @@
             <Parameter Name="Popust" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="esp_Izlazi_GetZadnjiRacun" ReturnType="Collection(String)" />
+          <FunctionImport Name="esp_GetRacunByIzlazID" ReturnType="Collection(Model.esp_GetRacunByIzlazID_Result1)">
+          <Parameter Name="IzlazID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="esp_BrosureProizvodi_SelectAll_Result">
           <Property Type="String" Name="NazivBrosure" Nullable="false" MaxLength="100" />
@@ -1733,6 +1739,49 @@
           <Property Type="String" Name="Sifra" Nullable="false" MaxLength="20" />
           <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="5" Scale="2" />
           <Property Type="Int32" Name="Kolicina" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="esp_GetRacunByIzlazID_Result">
+          <Property Type="Int32" Name="IzlazID" Nullable="false" />
+          <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Kolicina" Nullable="false" />
+          <Property Type="Decimal" Name="Popust" Nullable="true" Precision="5" Scale="2" />
+          <Property Type="String" Name="Broj_računa" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Iznos_bez_PDV_a" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Iznos_sa_PDV_om" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="Sifra" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Jedinica_mjere" Nullable="false" MaxLength="10" />
+          </ComplexType>
+        <ComplexType Name="esp_GetRacunByIzlazID_Result1">
+          <Property Type="Int32" Name="IzlazID" Nullable="false" />
+          <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Kolicina" Nullable="false" />
+          <Property Type="Decimal" Name="Popust" Nullable="true" Precision="5" Scale="2" />
+          <Property Type="String" Name="Sifra" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Broj_računa" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Iznos_bez_PDV_a" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Iznos_sa_PDV_om" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="Jedinica_mjere" Nullable="false" MaxLength="10" />
+          </ComplexType>
+        <ComplexType Name="esp_GetRacunByIzlazID_Result2">
+          <Property Type="Int32" Name="IzlazID" Nullable="false" />
+          <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Naziv" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sifra" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Kolicina" Nullable="false" />
+          <Property Type="Decimal" Name="Popust" Nullable="true" Precision="5" Scale="2" />
+          <Property Type="String" Name="Broj_računa" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Iznos_bez_PDV_a" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Iznos_sa_PDV_om" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="Jedinica_mjere" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2168,6 +2217,25 @@
           <FunctionImportMapping FunctionImportName="esp_Izlazi_UpdateZakljucen" FunctionName="Model.Store.esp_Izlazi_UpdateZakljucen" />
           <FunctionImportMapping FunctionImportName="esp_IzlazStavke_Insert" FunctionName="Model.Store.esp_IzlazStavke_Insert" />
           <FunctionImportMapping FunctionImportName="esp_Izlazi_GetZadnjiRacun" FunctionName="Model.Store.esp_Izlazi_GetZadnjiRacun" />
+          <FunctionImportMapping FunctionImportName="esp_GetRacunByIzlazID" FunctionName="Model.Store.esp_GetRacunByIzlazID">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.esp_GetRacunByIzlazID_Result1">
+                <ScalarProperty Name="IzlazID" ColumnName="IzlazID" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+                <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+                <ScalarProperty Name="Popust" ColumnName="Popust" />
+                <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Broj_računa" ColumnName="Broj računa" />
+                <ScalarProperty Name="Iznos_bez_PDV_a" ColumnName="Iznos bez PDV-a" />
+                <ScalarProperty Name="Iznos_sa_PDV_om" ColumnName="Iznos sa PDV-om" />
+                <ScalarProperty Name="Jedinica_mjere" ColumnName="Jedinica mjere" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
