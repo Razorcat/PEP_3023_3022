@@ -23,7 +23,6 @@ namespace eProdaja_AdminUI.Izvjestaji
 
         private void RacunForm_Load(object sender, EventArgs e)
         {
-
             this.reportViewer.LocalReport.ReportEmbeddedResource = "eProdaja_AdminUI.Izvjestaji.RacunReport.rdlc";
             BindReport(IzlazID);
         }
