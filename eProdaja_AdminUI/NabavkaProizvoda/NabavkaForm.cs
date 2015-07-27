@@ -29,6 +29,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
         private void NabavkaForm_Load(object sender, EventArgs e)
         {
             BindSkladista();
+            brojFaktureInput.Text = GenerirajBrojFakture(DAProizvodi.GetZadnjiBrFakture());
         }
 
         private void pretragaDButton_Click(object sender, EventArgs e)
@@ -184,6 +185,18 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
         private void stavkeGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             klik = true;
+        }
+
+        public string GenerirajBrojFakture(string ZadnjaFaktura)
+        {
+            if (string.IsNullOrEmpty(ZadnjaFaktura))
+            {
+                ZadnjaFaktura = "001";
+            }          
+            int num = Convert.ToInt32(ZadnjaFaktura);
+            num++;
+            string brFakture=num.ToString("000");            
+            return brFakture;
         }
     }
 }

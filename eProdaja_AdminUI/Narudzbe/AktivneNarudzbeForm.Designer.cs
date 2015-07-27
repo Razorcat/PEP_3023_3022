@@ -37,7 +37,7 @@
             this.narudzbeGrid.AllowUserToAddRows = false;
             this.narudzbeGrid.AllowUserToDeleteRows = false;
             this.narudzbeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.narudzbeGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.narudzbeGrid.BackgroundColor = System.Drawing.Color.Pink;
             this.narudzbeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.narudzbeGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.narudzbeGrid.Location = new System.Drawing.Point(0, 0);

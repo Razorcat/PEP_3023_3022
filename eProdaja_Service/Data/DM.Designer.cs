@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Zrinko\Desktop\PEP-SeminarskiRad-3023-3022\PEP-SeminarskiRad-3023-3022\Aplikacija-3023-3022\3023_3022\eProdaja_Service\Data\DM.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\FIT\Treća godina 2013-2014\Šesti semestar\PEP\PEP-SeminarskiRad-3023-3022\PEP-SeminarskiRad-3023-3022\Aplikacija-3023-3022\3023_3022\eProdaja_Service\Data\DM.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

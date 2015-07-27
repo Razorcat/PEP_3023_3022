@@ -51,4 +51,9 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    <asp:Label ID="lblBrosura" runat="server" Text="Brošura"></asp:Label>
+    <asp:DataList ID="dlBrosura" runat="server">
+    </asp:DataList>
+    <asp:GridView ID="gvBrosure" runat="server">
+    </asp:GridView>
 </asp:Content>

@@ -135,6 +135,9 @@ namespace eProdaja_Service.Data
                 Connection.dm.esp_UlazStavke_Insert(ulazId, s.ProizvodID, s.Kolicina, s.Cijena);
             }
         }
+        public static string GetZadnjiBrFakture() {
+            return Connection.dm.esp_Ulazi_GetZadnjiBrojFakture().FirstOrDefault();
+        }
 
         #endregion
     }

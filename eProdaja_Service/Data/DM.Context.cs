@@ -736,5 +736,10 @@ namespace eProdaja_Service.Data
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<esp_GetRacunByIzlazID_Result1>("esp_GetRacunByIzlazID", izlazIDParameter);
         }
+    
+        public virtual ObjectResult<string> esp_Ulazi_GetZadnjiBrojFakture()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("esp_Ulazi_GetZadnjiBrojFakture");
+        }
     }
 }

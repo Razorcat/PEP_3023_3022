@@ -624,6 +624,7 @@
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
           <Parameter Name="Sifra" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="esp_Ulazi_GetZadnjiBrojFakture" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="esp_Ulazi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="BrojFakture" Type="nvarchar" Mode="In" />
           <Parameter Name="Datum" Type="datetime" Mode="In" />
@@ -1538,6 +1539,7 @@
           <FunctionImport Name="esp_GetRacunByIzlazID" ReturnType="Collection(Model.esp_GetRacunByIzlazID_Result1)">
           <Parameter Name="IzlazID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="esp_Ulazi_GetZadnjiBrojFakture" ReturnType="Collection(String)" />
         </EntityContainer>
         <ComplexType Name="esp_BrosureProizvodi_SelectAll_Result">
           <Property Type="String" Name="NazivBrosure" Nullable="false" MaxLength="100" />
@@ -2236,6 +2238,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Ulazi_GetZadnjiBrojFakture" FunctionName="Model.Store.esp_Ulazi_GetZadnjiBrojFakture" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

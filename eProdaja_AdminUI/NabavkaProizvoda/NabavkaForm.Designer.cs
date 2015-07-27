@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnBrisiStavku = new System.Windows.Forms.Button();
             this.zakljuciButton = new System.Windows.Forms.Button();
             this.stavkeGrid = new System.Windows.Forms.DataGridView();
             this.ProizvodID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnBrisiStavku = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -93,6 +93,20 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Stavke";
+            // 
+            // btnBrisiStavku
+            // 
+            this.btnBrisiStavku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnBrisiStavku.ForeColor = System.Drawing.Color.Black;
+            this.btnBrisiStavku.Image = global::eProdaja_AdminUI.Properties.Resources.linedpaperminus32;
+            this.btnBrisiStavku.Location = new System.Drawing.Point(225, 180);
+            this.btnBrisiStavku.Name = "btnBrisiStavku";
+            this.btnBrisiStavku.Size = new System.Drawing.Size(100, 47);
+            this.btnBrisiStavku.TabIndex = 12;
+            this.btnBrisiStavku.Text = "Briši stavku";
+            this.btnBrisiStavku.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBrisiStavku.UseVisualStyleBackColor = true;
+            this.btnBrisiStavku.Click += new System.EventHandler(this.btnBrisiStavku_Click);
             // 
             // zakljuciButton
             // 
@@ -341,6 +355,7 @@
             this.brojFaktureInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.brojFaktureInput.Location = new System.Drawing.Point(103, 55);
             this.brojFaktureInput.Name = "brojFaktureInput";
+            this.brojFaktureInput.ReadOnly = true;
             this.brojFaktureInput.Size = new System.Drawing.Size(217, 21);
             this.brojFaktureInput.TabIndex = 3;
             this.brojFaktureInput.Validating += new System.ComponentModel.CancelEventHandler(this.brojFaktureInput_Validating);
@@ -476,20 +491,6 @@
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
-            // 
-            // btnBrisiStavku
-            // 
-            this.btnBrisiStavku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnBrisiStavku.ForeColor = System.Drawing.Color.Black;
-            this.btnBrisiStavku.Image = global::eProdaja_AdminUI.Properties.Resources.linedpaperminus32;
-            this.btnBrisiStavku.Location = new System.Drawing.Point(225, 180);
-            this.btnBrisiStavku.Name = "btnBrisiStavku";
-            this.btnBrisiStavku.Size = new System.Drawing.Size(100, 47);
-            this.btnBrisiStavku.TabIndex = 12;
-            this.btnBrisiStavku.Text = "Briši stavku";
-            this.btnBrisiStavku.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBrisiStavku.UseVisualStyleBackColor = true;
-            this.btnBrisiStavku.Click += new System.EventHandler(this.btnBrisiStavku_Click);
             // 
             // NabavkaForm
             // 

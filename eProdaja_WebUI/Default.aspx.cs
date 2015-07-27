@@ -30,6 +30,7 @@ namespace eProdaja_WebUI
             {
                 BindVrste();
                 BindGrid();
+                BindBrosura();
             }
         }
 
@@ -130,6 +131,13 @@ namespace eProdaja_WebUI
         {
             //proizvodiGrid.PageIndex = 0;
             //BindGrid();
+        }
+        void BindBrosura() {
+            dlBrosura.DataSource= DABrosure.SelectAll();
+            dlBrosura.DataBind();
+                      
+            gvBrosure.DataSource = DABrosure.SelectAll();
+            gvBrosure.DataBind();
         }
     }
 }
