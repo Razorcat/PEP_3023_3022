@@ -56,7 +56,8 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             proizvodiSGrid.AutoGenerateColumns = true;
             proizvodiSGrid.DataSource = DAProizvodi.SelectBrosure();
             proizvodiSGrid.DataSource = bpList;
-          //  proizvodiSGrid.Columns[0].Visible = true;
+            proizvodiSGrid.Columns[0].Visible = true;
+            proizvodiSGrid.Columns[1].Visible = true;
             proizvodiSGrid.ClearSelection();   
         }
 
@@ -74,7 +75,8 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             proizvodiSGrid.AutoGenerateColumns = true;
             // proizvodiSGrid.DataSource = DAProizvodi.SelectBrosure();
             proizvodiSGrid.DataSource = bpList2;
-            //  proizvodiSGrid.Columns[0].Visible = true;
+            proizvodiSGrid.Columns[0].Visible = true;
+            proizvodiSGrid.Columns[1].Visible = true;
             proizvodiSGrid.ClearSelection();   
         }
 
@@ -130,6 +132,6 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             if (cmbBrosura.SelectedIndex != 0)
                 BindGridByBrosura();   
         }
-
+        
     }
 }

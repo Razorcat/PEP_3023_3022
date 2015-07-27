@@ -65,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnBrisiStavku = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnBrisiStavku);
             this.groupBox3.Controls.Add(this.zakljuciButton);
             this.groupBox3.Controls.Add(this.stavkeGrid);
             this.groupBox3.Controls.Add(this.dodajStavkuButton);
@@ -127,6 +129,7 @@
             this.stavkeGrid.Size = new System.Drawing.Size(418, 133);
             this.stavkeGrid.TabIndex = 0;
             this.stavkeGrid.TabStop = false;
+            this.stavkeGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stavkeGrid_CellClick);
             // 
             // ProizvodID
             // 
@@ -474,6 +477,20 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // btnBrisiStavku
+            // 
+            this.btnBrisiStavku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnBrisiStavku.ForeColor = System.Drawing.Color.Black;
+            this.btnBrisiStavku.Image = global::eProdaja_AdminUI.Properties.Resources.linedpaperminus32;
+            this.btnBrisiStavku.Location = new System.Drawing.Point(225, 180);
+            this.btnBrisiStavku.Name = "btnBrisiStavku";
+            this.btnBrisiStavku.Size = new System.Drawing.Size(100, 47);
+            this.btnBrisiStavku.TabIndex = 12;
+            this.btnBrisiStavku.Text = "Briši stavku";
+            this.btnBrisiStavku.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBrisiStavku.UseVisualStyleBackColor = true;
+            this.btnBrisiStavku.Click += new System.EventHandler(this.btnBrisiStavku_Click);
+            // 
             // NabavkaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,5 +555,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnBrisiStavku;
     }
 }

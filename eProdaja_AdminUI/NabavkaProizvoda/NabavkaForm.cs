@@ -18,6 +18,7 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
         private List<UlazStavke> stavke = new List<UlazStavke>();
         private decimal iznos = 0;
         private decimal pdv = 0;
+        bool klik = false;
 
         public NabavkaForm()
         {
@@ -165,8 +166,24 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
                 e.Cancel = true;
                 errorProvider.SetError(skladisteList, "Niste odabrali skladište!");
             }
-        }       
+        }
 
-  
+        private void btnBrisiStavku_Click(object sender, EventArgs e)
+        {
+            if (stavke.Count>0 && klik==true)
+            {
+                iznos -= stavke[stavkeGrid.CurrentCell.RowIndex].Cijena * stavke[stavkeGrid.CurrentCell.RowIndex].Kolicina;
+                pdv -= (decimal)0.17 * stavke[stavkeGrid.CurrentCell.RowIndex].Cijena * stavke[stavkeGrid.CurrentCell.RowIndex].Kolicina;
+                iznosRacunaInput.Text = Math.Round(iznos + pdv, 2).ToString();
+                pdvInput.Text = Math.Round(pdv, 2).ToString();
+                stavke.RemoveAt(stavkeGrid.CurrentCell.RowIndex);
+                BindGrid();
+            }
+        }
+
+        private void stavkeGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            klik = true;
+        }
     }
 }
