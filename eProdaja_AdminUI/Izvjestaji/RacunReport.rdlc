@@ -299,7 +299,7 @@
         <Top>0.17639cm</Top>
         <Left>0.73766cm</Left>
         <Height>1.2cm</Height>
-        <Width>15.57042cm</Width>
+        <Width>15.5704cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -329,6 +329,7 @@
                     <FontStyle>Italic</FontStyle>
                     <FontFamily>Segoe UI</FontFamily>
                     <FontSize>22pt</FontSize>
+                    <Color>Plum</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -594,7 +595,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox32">
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -608,9 +609,9 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox32</rd:DefaultName>
-          <Top>1.94cm</Top>
-          <Left>14.65474cm</Left>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>1.90183cm</Top>
+          <Left>14.65475cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>8</ZIndex>

@@ -38,7 +38,13 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
         private void BindBrosure()
         {
-            cmbBrosura.DataSource  = DABrosure.SelectAll();
+            List<Brosure> brosure = new List<Brosure>();
+            brosure= DABrosure.SelectAll();
+            for (int i=1;i<brosure.Count;i++)               
+                if (brosure[i].DatumIsteka < DateTime.Now)
+                    brosure.RemoveAt(i);                    
+
+            cmbBrosura.DataSource = brosure; 
             cmbBrosura.DisplayMember = "NazivBrosure";
             cmbBrosura.ValueMember = "BrosuraID";
         }
