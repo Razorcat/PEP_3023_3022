@@ -178,7 +178,7 @@ namespace eProdaja_AdminUI
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
-            Narudzbe.ProdajaForm form = new Narudzbe.ProdajaForm();
+            Narudzbe.ProdajaForm form = new Narudzbe.ProdajaForm(null);
             form.MdiParent = this;
             form.Show();
         }

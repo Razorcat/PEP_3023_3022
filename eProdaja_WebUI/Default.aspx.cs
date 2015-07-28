@@ -133,11 +133,10 @@ namespace eProdaja_WebUI
             //BindGrid();
         }
         void BindBrosura() {
-            dlBrosura.DataSource= DABrosure.SelectAll();
-            dlBrosura.DataBind();
-                      
-            gvBrosure.DataSource = DABrosure.SelectAll();
-            gvBrosure.DataBind();
+          //  lvBrosura.DataSource = DABrosure.SelectAll();
+          //  lvBrosura.DataBind();
+          //  gvBrosure.DataSource = DABrosure.SelectAll();
+          //  gvBrosure.DataBind();
         }
     }
 }

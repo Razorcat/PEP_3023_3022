@@ -13,7 +13,7 @@ namespace eProdaja_Service.Data
             narudzba.KupacID = Connection.dm.esp_Kupci_SelectByKorisnickoIme(korisnickoIme).First().KupacID;
 
             Connection.dm.Narudzbe.Add(narudzba);
-            Connection.dm.SaveChanges();
+            Connection.dm.SaveChanges();            
         }
 
       
@@ -35,5 +35,14 @@ namespace eProdaja_Service.Data
             return Connection.dm.esp_Narudzbe_SelectAktivne().ToList();
         }
 
+        public static List<esp_Narudzbe_GetProizvodeByNarudzbaId_Result> GetProizvodeNarudzbaByID(int NarudzbaId) {
+            return Connection.dm.esp_Narudzbe_GetProizvodeByNarudzbaId(NarudzbaId).ToList();
+        }
+        public static void OtkaziNarudzbu(int NarudzbaId, bool Otkazano) {
+            Connection.dm.esp_Narudzbe_Otkazi(NarudzbaId, Otkazano);
+        }
+        public static NarudzbaStavke NarudzbeStavkaGetByProizvodId(int ProizvodId) {
+            return Connection.dm.esp_NarudzbeStavka_GetByProizvodID(ProizvodId).First();
+        }
     }
 }

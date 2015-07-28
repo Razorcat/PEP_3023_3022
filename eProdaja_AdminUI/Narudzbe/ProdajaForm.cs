@@ -23,12 +23,31 @@ namespace eProdaja_AdminUI.Narudzbe
         bool dgPrKlik = false;
         bool dgPKlik = false;        
 
-        public ProdajaForm()
+        public ProdajaForm(List<NarudzbaStavke> ns)
         {
             InitializeComponent();
             BindGridProizvodi();
             BindSkladista();
             txtbBrRacuna.Text = GenerirajRacun(DAProdaja.GetZadnjiRacun());
+            if (ns != null)
+                foreach (NarudzbaStavke n in ns)
+                {
+                    IzlazStavke iStavka = new IzlazStavke();
+                    iStavka.Proizvodi = n.Proizvodi;
+                    iStavka.ProizvodID = n.ProizvodID;
+                    iStavka.Cijena = n.Proizvodi.Cijena; // Math.Round(Convert.ToDecimal(mtxtbCijena.Text) * (1 - ntxtbPopust.Value / 100), 2);
+                    iStavka.Popust = 0; // Math.Round(Convert.ToDecimal(mtxtbCijena.Text) * (ntxtbPopust.Value / 100), 2);
+                    iStavka.Kolicina = n.Kolicina; //narudzbe stavke.kolicina;
+
+                    iznos += iStavka.Cijena * iStavka.Kolicina;
+                    iznosPDV = iznos * (decimal)1.17;
+                    izlazStavke.Add(iStavka);
+
+                    txtbIznosBezPDV.Text = Math.Round(iznos, 2).ToString() + " KM";
+                    txtbIznosSaPDV.Text = Math.Round(iznosPDV, 2).ToString() + " KM";
+
+                    BindGridProdaja();
+                }
         }
 
         private void BindSkladista()

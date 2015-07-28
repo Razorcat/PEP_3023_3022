@@ -124,6 +124,8 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
             if(bpList.Count>0)
                 foreach(BrosureProizvodi bp in bpList)
                     DABrosure.insertBrosureProizvodi(bp);
+            MessageBox.Show("Dodano!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void cmbBrosura_SelectedIndexChanged(object sender, EventArgs e)

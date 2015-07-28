@@ -11,14 +11,11 @@ namespace eProdaja_Service.Data
 {
     using System;
     
-    public partial class esp_Narudzbe_SelectAktivne_Result
+    public partial class esp_NarudzbeStavka_GetByProizvodID_Result
     {
+        public int NarudzbaStavkaID { get; set; }
         public int NarudzbaID { get; set; }
-        public string BrojNarudzbe { get; set; }
-        public int KupacID { get; set; }
-        public System.DateTime Datum { get; set; }
-        public string Kupac { get; set; }
-        public Nullable<decimal> Iznos { get; set; }
-        public Nullable<bool> Otkazano { get; set; }
+        public int ProizvodID { get; set; }
+        public int Kolicina { get; set; }
     }
 }

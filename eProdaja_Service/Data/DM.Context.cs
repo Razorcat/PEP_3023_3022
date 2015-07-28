@@ -741,5 +741,45 @@ namespace eProdaja_Service.Data
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("esp_Ulazi_GetZadnjiBrojFakture");
         }
+    
+        public virtual ObjectResult<esp_Narudzbe_GetProizvodeByNarudzbaId_Result> esp_Narudzbe_GetProizvodeByNarudzbaId(Nullable<int> narudzbaID)
+        {
+            var narudzbaIDParameter = narudzbaID.HasValue ?
+                new ObjectParameter("NarudzbaID", narudzbaID) :
+                new ObjectParameter("NarudzbaID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<esp_Narudzbe_GetProizvodeByNarudzbaId_Result>("esp_Narudzbe_GetProizvodeByNarudzbaId", narudzbaIDParameter);
+        }
+    
+        public virtual int esp_Narudzbe_Otkazi(Nullable<int> narudzbaID, Nullable<bool> otkazano)
+        {
+            var narudzbaIDParameter = narudzbaID.HasValue ?
+                new ObjectParameter("NarudzbaID", narudzbaID) :
+                new ObjectParameter("NarudzbaID", typeof(int));
+    
+            var otkazanoParameter = otkazano.HasValue ?
+                new ObjectParameter("Otkazano", otkazano) :
+                new ObjectParameter("Otkazano", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("esp_Narudzbe_Otkazi", narudzbaIDParameter, otkazanoParameter);
+        }
+    
+        public virtual ObjectResult<NarudzbaStavke> esp_NarudzbeStavka_GetByProizvodID(Nullable<int> proizvodID)
+        {
+            var proizvodIDParameter = proizvodID.HasValue ?
+                new ObjectParameter("ProizvodID", proizvodID) :
+                new ObjectParameter("ProizvodID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<NarudzbaStavke>("esp_NarudzbeStavka_GetByProizvodID", proizvodIDParameter);
+        }
+    
+        public virtual ObjectResult<NarudzbaStavke> esp_NarudzbeStavka_GetByProizvodID(Nullable<int> proizvodID, MergeOption mergeOption)
+        {
+            var proizvodIDParameter = proizvodID.HasValue ?
+                new ObjectParameter("ProizvodID", proizvodID) :
+                new ObjectParameter("ProizvodID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<NarudzbaStavke>("esp_NarudzbeStavka_GetByProizvodID", mergeOption, proizvodIDParameter);
+        }
     }
 }

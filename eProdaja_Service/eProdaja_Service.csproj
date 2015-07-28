@@ -128,6 +128,12 @@
     <Compile Include="Data\esp_Kupci_SelectByKorisnickoIme_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\esp_NarudzbeStavka_GetByProizvodID_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_Narudzbe_GetProizvodeByNarudzbaId_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\esp_Narudzbe_SelectAktivne_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
