@@ -51,13 +51,13 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <asp:Label ID="lblPreporuka" runat="server" Text="Preporuka"></asp:Label>
     <h4>Preporuka</h4>
-                 <asp:DataGrid ID="gdPreporuka" runat="server"  AutoGenerateColumns="False" PageSize="5"  OnItemDataBound="dgProizvodi_ItemDataBoundPreporuka" DataKeyField="ProizvodID" OnItemCommand="dgProizvodi_ItemCommandPreporuka" BackColor="#FFFFCC" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" ForeColor="#FF5050">                        
+                 <asp:DataGrid ID="gdPreporuka" runat="server"  AutoGenerateColumns="False" PageSize="5" DataKeyField="ProizvodID" OnItemCommand="dgProizvodi_ItemCommandPreporuka" BackColor="#66FFFF" BorderColor="Black" BorderStyle="Groove" BorderWidth="1px" ForeColor="#000066" Font-Bold="False" Font-Italic="True" Font-Overline="False" Font-Size="Small" Font-Strikeout="False" Font-Underline="False">                        
                         <Columns>
                             <asp:TemplateColumn>
                                 <ItemTemplate>
-                                    <asp:Image ID="imgSlikaThumb" runat="server" BackColor="#FF9999" BorderStyle="Solid" />
+                                    <asp:Image ImageUrl='<%# string.Format("/ImageHandler.ashx?id={0}", Eval("ProizvodID")) %>'  runat="server" />
+                                    <%--<asp:Image ID="imgSlikaThumb" runat="server" BackColor="#FF9999" BorderStyle="Solid" />--%>
                                  </ItemTemplate>
                              </asp:TemplateColumn>
                                     <asp:BoundColumn DataField="Naziv" HeaderText="Naziv "> </asp:BoundColumn>
@@ -70,161 +70,25 @@
                                 </ItemTemplate>
                             </asp:TemplateColumn>
                             </Columns>
+                        <HeaderStyle Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Small" Font-Strikeout="False" Font-Underline="False" />
                      </asp:DataGrid>
     <br />    
     <asp:Label ID="lblBrosura" runat="server" Text="Brošura"></asp:Label>
    
-    <asp:ListView ID="lvBrosura" runat="server" DataSourceID="odsLvBrosura">
-        <AlternatingItemTemplate>
-            <tr style="background-color:#FFF8DC;">
-                <td>
-                    <asp:Label ID="BrosuraIDLabel" runat="server" Text='<%# Eval("BrosuraID") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="NazivBrosureLabel" runat="server" Text='<%# Eval("NazivBrosure") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="DatumPocetkaLabel" runat="server" Text='<%# Eval("DatumPocetka") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="DatumIstekaLabel" runat="server" Text='<%# Eval("DatumIsteka") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="BrosureProizvodiLabel" runat="server" Text='<%# Eval("BrosureProizvodi") %>' />
-                </td>
-            </tr>
-        </AlternatingItemTemplate>
-        <EditItemTemplate>
-            <tr style="background-color:#008A8C;color: #FFFFFF;">
-                <td>
-                    <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                    <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                </td>
-                <td>
-                    <asp:TextBox ID="BrosuraIDTextBox" runat="server" Text='<%# Bind("BrosuraID") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="NazivBrosureTextBox" runat="server" Text='<%# Bind("NazivBrosure") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="DatumPocetkaTextBox" runat="server" Text='<%# Bind("DatumPocetka") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="DatumIstekaTextBox" runat="server" Text='<%# Bind("DatumIsteka") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="BrosureProizvodiTextBox" runat="server" Text='<%# Bind("BrosureProizvodi") %>' />
-                </td>
-            </tr>
-        </EditItemTemplate>
-        <EmptyDataTemplate>
-            <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
-                <tr>
-                    <td>No data was returned.</td>
-                </tr>
-            </table>
-        </EmptyDataTemplate>
-        <InsertItemTemplate>
-            <tr style="">
-                <td>
-                    <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
-                    <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                </td>
-                <td>
-                    <asp:TextBox ID="BrosuraIDTextBox" runat="server" Text='<%# Bind("BrosuraID") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="NazivBrosureTextBox" runat="server" Text='<%# Bind("NazivBrosure") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="DatumPocetkaTextBox" runat="server" Text='<%# Bind("DatumPocetka") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="DatumIstekaTextBox" runat="server" Text='<%# Bind("DatumIsteka") %>' />
-                </td>
-                <td>
-                    <asp:TextBox ID="BrosureProizvodiTextBox" runat="server" Text='<%# Bind("BrosureProizvodi") %>' />
-                </td>
-            </tr>
-        </InsertItemTemplate>
-        <ItemTemplate>
-            <tr style="background-color:#DCDCDC;color: #000000;">
-                <td>
-                    <asp:Label ID="BrosuraIDLabel" runat="server" Text='<%# Eval("BrosuraID") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="NazivBrosureLabel" runat="server" Text='<%# Eval("NazivBrosure") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="DatumPocetkaLabel" runat="server" Text='<%# Eval("DatumPocetka") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="DatumIstekaLabel" runat="server" Text='<%# Eval("DatumIsteka") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="BrosureProizvodiLabel" runat="server" Text='<%# Eval("BrosureProizvodi") %>' />
-                </td>
-            </tr>
-        </ItemTemplate>
-        <LayoutTemplate>
-            <table runat="server">
-                <tr runat="server">
-                    <td runat="server">
-                        <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                            <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
-                                <th runat="server">BrosuraID</th>
-                                <th runat="server">NazivBrosure</th>
-                                <th runat="server">DatumPocetka</th>
-                                <th runat="server">DatumIsteka</th>
-                                <th runat="server">BrosureProizvodi</th>
-                            </tr>
-                            <tr id="itemPlaceholder" runat="server">
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr runat="server">
-                    <td runat="server" style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;"></td>
-                </tr>
-            </table>
-        </LayoutTemplate>
-        <SelectedItemTemplate>
-            <tr style="background-color:#008A8C;font-weight: bold;color: #FFFFFF;">
-                <td>
-                    <asp:Label ID="BrosuraIDLabel" runat="server" Text='<%# Eval("BrosuraID") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="NazivBrosureLabel" runat="server" Text='<%# Eval("NazivBrosure") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="DatumPocetkaLabel" runat="server" Text='<%# Eval("DatumPocetka") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="DatumIstekaLabel" runat="server" Text='<%# Eval("DatumIsteka") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="BrosureProizvodiLabel" runat="server" Text='<%# Eval("BrosureProizvodi") %>' />
-                </td>
-            </tr>
-        </SelectedItemTemplate>
-    </asp:ListView>
-   
     <asp:ObjectDataSource ID="odsLvBrosura" runat="server" SelectMethod="SelectAll" TypeName="eProdaja_Service.Data.DABrosure"></asp:ObjectDataSource>
    
-    <asp:GridView ID="gvBrosure" runat="server" AutoGenerateColumns="False" DataSourceID="odsLvBrosura">
+    <asp:GridView ID="gvBrosure" runat="server" AutoGenerateColumns="False" PageSize="3" DataSourceID="odsLvBrosura" AllowPaging="True">
         <Columns>
-            <asp:BoundField DataField="BrosuraID" HeaderText="BrosuraID" SortExpression="BrosuraID" />
-            <asp:BoundField DataField="NazivBrosure" HeaderText="NazivBrosure" SortExpression="NazivBrosure" />
-            <asp:BoundField DataField="DatumPocetka" HeaderText="DatumPocetka" SortExpression="DatumPocetka" />
+            <asp:CommandField ShowSelectButton="True" SelectText="Odaberi" />
+            <asp:BoundField DataField="BrosuraID" HeaderText="BrosuraID" SortExpression="BrosuraID" Visible="False" />
+            <asp:BoundField DataField="NazivBrosure" HeaderText="NazivBrosure" SortExpression="NazivBrosure" >
+            <HeaderStyle Width="155px" />
+            <ItemStyle Width="155px" />
+            </asp:BoundField>
+            <asp:BoundField DataField="DatumPocetka" HeaderText="DatumPocetka" SortExpression="DatumPocetka" >
+            <HeaderStyle Width="125px" />
+            </asp:BoundField>
             <asp:BoundField DataField="DatumIsteka" HeaderText="DatumIsteka" SortExpression="DatumIsteka" />
         </Columns>
     </asp:GridView>
-    <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataSourceID="odsLvBrosura" Height="50px" Width="125px">
-        <Fields>
-            <asp:BoundField DataField="BrosuraID" HeaderText="BrosuraID" SortExpression="BrosuraID" />
-            <asp:BoundField DataField="NazivBrosure" HeaderText="NazivBrosure" SortExpression="NazivBrosure" />
-            <asp:BoundField DataField="DatumPocetka" HeaderText="DatumPocetka" SortExpression="DatumPocetka" />
-            <asp:BoundField DataField="DatumIsteka" HeaderText="DatumIsteka" SortExpression="DatumIsteka" />
-        </Fields>
-    </asp:DetailsView>
-</asp:Content>
+    </asp:Content>

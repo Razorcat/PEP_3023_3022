@@ -49,15 +49,6 @@ namespace eProdaja_WebUI {
         protected global::System.Web.UI.WebControls.GridView proizvodiGrid;
         
         /// <summary>
-        /// lblPreporuka control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPreporuka;
-        
-        /// <summary>
         /// gdPreporuka control.
         /// </summary>
         /// <remarks>
@@ -76,15 +67,6 @@ namespace eProdaja_WebUI {
         protected global::System.Web.UI.WebControls.Label lblBrosura;
         
         /// <summary>
-        /// lvBrosura control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvBrosura;
-        
-        /// <summary>
         /// odsLvBrosura control.
         /// </summary>
         /// <remarks>
@@ -101,14 +83,5 @@ namespace eProdaja_WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvBrosure;
-        
-        /// <summary>
-        /// DetailsView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
     }
 }

@@ -32,8 +32,7 @@ namespace eProdaja_WebUI
             if (!IsPostBack)
             {
                 BindVrste();
-                BindGrid();
-                BindBrosura();
+                BindGrid();                
             }
         }
 
@@ -111,6 +110,7 @@ namespace eProdaja_WebUI
                     {
                         iznosRacuna += s.Proizvodi.Cijena * kolicina;
                         s.Kolicina += kolicina;
+                        BindPreporuka(proizvodId);
                         return;
                     }
                 }
@@ -136,13 +136,7 @@ namespace eProdaja_WebUI
         {
             //proizvodiGrid.PageIndex = 0;
             //BindGrid();
-        }
-        void BindBrosura() {
-          //  lvBrosura.DataSource = DABrosure.SelectAll();
-          //  lvBrosura.DataBind();
-          //  gvBrosure.DataSource = DABrosure.SelectAll();
-          //  gvBrosure.DataBind();
-        }
+        }     
 
 
         /////////////////////preporuka
@@ -156,19 +150,57 @@ namespace eProdaja_WebUI
                 gdPreporuka.DataSource = pList;
                 gdPreporuka.DataBind();
             }
-        }
-        protected void dgProizvodi_ItemDataBoundPreporuka(object sender, DataGridItemEventArgs e)
-        {
-            if (e.Item.ItemIndex != -1) ///
-            {
-                Image img = (Image)e.Item.FindControl("imgSlikaThumb");
-                img.ImageUrl = "~/ImageHandler.ashx?proizvodId=" + pList[e.Item.ItemIndex].ProizvodID;
-            }
-        }
+        }      
 
         protected void dgProizvodi_ItemCommandPreporuka(object source, DataGridCommandEventArgs e)
         {
+            if (e.CommandName == "DodajUKopruCmd")
+            {
+                int proizvodId = Convert.ToInt32(gdPreporuka.DataKeys[e.Item.ItemIndex]);
+                TextBox kolicinaInput = (TextBox)e.Item.FindControl("txtbKolicina");
+                int kolicina = Convert.ToInt32(kolicinaInput.Text);
 
+                if (narudzba == null)
+                {
+                    narudzba = new Narudzbe();
+
+                    //Broj narudžbe generisati na osnovu godine i aktivnog broja narudžbi
+                    //Format broja rbr-godina
+                    string maxBr = DANarudzbe.GetMaxBrojNarudzbe();
+                    int rbr = Convert.ToInt32(maxBr.Split('-')[0]) + 1;
+                    narudzba.BrojNarudzbe = rbr + "-" + DateTime.Now.Year;
+
+                    narudzba.Datum = DateTime.Now;
+                    narudzba.Otkazano = false;
+                    narudzba.Status = true;
+
+                    iznosRacuna = 0;
+                }
+
+                //Provjeriti da li stavka već postoji i povećati samo količinu
+                foreach (NarudzbaStavke s in narudzba.NarudzbaStavke)
+                {
+                    if (s.ProizvodID == proizvodId)
+                    {
+                        iznosRacuna += s.Proizvodi.Cijena * kolicina;
+                        s.Kolicina += kolicina;                       
+                        return;
+                    }
+                }
+
+                NarudzbaStavke stavka = new NarudzbaStavke();
+                stavka.ProizvodID = proizvodId;
+                stavka.Kolicina = kolicina;
+                stavka.Proizvodi = DAProizvodi.SelectById(proizvodId);
+
+                narudzba.NarudzbaStavke.Add(stavka);
+
+                iznosRacuna += kolicina * stavka.Proizvodi.Cijena;
+
+                HyperLink link = (HyperLink)this.Master.FindControl("cartLink");
+                link.Text = string.Format("My Cart({0})", narudzba.NarudzbaStavke.Count);
+                
+            }
         }
     }
 }
