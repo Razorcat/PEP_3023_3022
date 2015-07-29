@@ -32,7 +32,7 @@ namespace eProdaja_WebUI
             if (!IsPostBack)
             {
                 BindVrste();
-                BindGrid();                
+                BindGrid();                            
             }
         }
 
@@ -201,6 +201,19 @@ namespace eProdaja_WebUI
                 link.Text = string.Format("My Cart({0})", narudzba.NarudzbaStavke.Count);
                 
             }
+        }
+
+        protected void gvBrosure_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "brosuraCommand")
+            {
+                int brosuraId = Convert.ToInt32(e.CommandArgument);
+                BindBP(brosuraId);
+            }
+        }
+        void BindBP(int id) {
+            DataGridBP.DataSource = DABrosure.GetBrosureProizvodi(id);
+            DataGridBP.DataBind();
         }
     }
 }

@@ -52,7 +52,7 @@
         </Columns>
     </asp:GridView>
     <h4>Preporuka</h4>
-                 <asp:DataGrid ID="gdPreporuka" runat="server"  AutoGenerateColumns="False" PageSize="5" DataKeyField="ProizvodID" OnItemCommand="dgProizvodi_ItemCommandPreporuka" BackColor="#66FFFF" BorderColor="Black" BorderStyle="Groove" BorderWidth="1px" ForeColor="#000066" Font-Bold="False" Font-Italic="True" Font-Overline="False" Font-Size="Small" Font-Strikeout="False" Font-Underline="False">                        
+                 <asp:DataGrid ID="gdPreporuka" runat="server"  AutoGenerateColumns="False" PageSize="5" DataKeyField="ProizvodID" OnItemCommand="dgProizvodi_ItemCommandPreporuka" BackColor="#66FFFF" BorderColor="Black" BorderStyle="Groove" BorderWidth="1px" ForeColor="#000066" Font-Bold="False" Font-Italic="True" Font-Overline="False" Font-Size="Small" Font-Strikeout="False" Font-Underline="False" AllowPaging="True">                        
                         <Columns>
                             <asp:TemplateColumn>
                                 <ItemTemplate>
@@ -66,29 +66,61 @@
                             <asp:TemplateColumn>
                                 <ItemTemplate>              
                                     <asp:TextBox ID="txtbKolicina" runat="server" Width="25px" Text="1"></asp:TextBox>
-                                    <asp:LinkButton ID="lbtnDodajUKosaricu" runat="server" CommandName="DodajUKopruCmd">Dodaj u košarici</asp:LinkButton>
+                                    <asp:LinkButton ID="lbtnDodajUKosaricu" runat="server" CommandName="DodajUKopruCmd">Dodaj u korpu</asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateColumn>
                             </Columns>
                         <HeaderStyle Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Small" Font-Strikeout="False" Font-Underline="False" />
+                        <PagerStyle Mode="NumericPages" />
                      </asp:DataGrid>
     <br />    
     <asp:Label ID="lblBrosura" runat="server" Text="Brošura"></asp:Label>
    
     <asp:ObjectDataSource ID="odsLvBrosura" runat="server" SelectMethod="SelectAll" TypeName="eProdaja_Service.Data.DABrosure"></asp:ObjectDataSource>
    
-    <asp:GridView ID="gvBrosure" runat="server" AutoGenerateColumns="False" PageSize="3" DataSourceID="odsLvBrosura" AllowPaging="True">
-        <Columns>
-            <asp:CommandField ShowSelectButton="True" SelectText="Odaberi" />
-            <asp:BoundField DataField="BrosuraID" HeaderText="BrosuraID" SortExpression="BrosuraID" Visible="False" />
-            <asp:BoundField DataField="NazivBrosure" HeaderText="NazivBrosure" SortExpression="NazivBrosure" >
+    <asp:GridView ID="gvBrosure" runat="server" AutoGenerateColumns="False" PageSize="3" DataSourceID="odsLvBrosura" AllowPaging="True" OnRowCommand="gvBrosure_RowCommand">
+        <Columns>            
+            <asp:TemplateField>
+                <ItemTemplate>    
+                    <asp:LinkButton ID="lbBrosura" runat="server" CommandName="brosuraCommand" CommandArgument='<%# Eval("BrosuraID") %>'>Detalji</asp:LinkButton>            
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="BrosuraID" HeaderText="BrosuraID" SortExpression="BrosuraID" />
+            <asp:BoundField DataField="NazivBrosure" HeaderText="Naziv brošure" SortExpression="NazivBrosure" >
             <HeaderStyle Width="155px" />
             <ItemStyle Width="155px" />
             </asp:BoundField>
-            <asp:BoundField DataField="DatumPocetka" HeaderText="DatumPocetka" SortExpression="DatumPocetka" >
-            <HeaderStyle Width="125px" />
+            <asp:BoundField DataField="DatumPocetka" HeaderText="Početka brošure" SortExpression="DatumPocetka" >
+            <HeaderStyle Width="135px" />
             </asp:BoundField>
-            <asp:BoundField DataField="DatumIsteka" HeaderText="DatumIsteka" SortExpression="DatumIsteka" />
+            <asp:BoundField DataField="DatumIsteka" HeaderText="Kraj brošure" SortExpression="DatumIsteka" />
         </Columns>
     </asp:GridView>
+
+    <asp:GridView ID="gvBP" runat="server">        
+    </asp:GridView>
+
+
+    <asp:DataGrid ID="DataGridBP" runat="server"  AutoGenerateColumns="False" PageSize="4" DataKeyField="BrosuraProizvodID" OnItemCommand="dgProizvodi_ItemCommandPreporuka" BackColor="#FFFFCC" BorderColor="Black" BorderStyle="Groove" BorderWidth="1px" ForeColor="#000099" Font-Bold="False" Font-Italic="True" Font-Overline="False" Font-Size="Small" Font-Strikeout="False" Font-Underline="False" AllowPaging="True">                        
+                        <Columns>
+                            <asp:TemplateColumn>
+                                <ItemTemplate>
+                                    <asp:Image ImageUrl='<%# string.Format("/ImageHandler.ashx?id={0}", Eval("BrosuraProizvodID")) %>'  runat="server" />
+                                    <%--<asp:Image ID="imgSlikaThumb" runat="server" BackColor="#FF9999" BorderStyle="Solid" />--%>
+                                 </ItemTemplate>
+                             </asp:TemplateColumn>
+                                    <asp:BoundColumn DataField="Naziv" HeaderText="Naziv "> </asp:BoundColumn>
+                                    <asp:BoundColumn DataField="Sifra" HeaderText="Šifra "> </asp:BoundColumn>
+                                    <asp:BoundColumn DataField="Akcijska_cijena" HeaderText="Akcijska cijena "> </asp:BoundColumn>
+                         <%--   <asp:TemplateColumn>
+                                <ItemTemplate>              
+                                    <asp:TextBox ID="txtbKolicina" runat="server" Width="25px" Text="1"></asp:TextBox>
+                                    <asp:LinkButton ID="lbtnDodajUKosaricu" runat="server" CommandName="DodajUKopruCmd">Dodaj u korpu</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateColumn>--%>
+                            </Columns>
+                        <HeaderStyle Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Small" Font-Strikeout="False" Font-Underline="False" />
+                        <PagerStyle Mode="NumericPages" />
+                     </asp:DataGrid>
+
     </asp:Content>
