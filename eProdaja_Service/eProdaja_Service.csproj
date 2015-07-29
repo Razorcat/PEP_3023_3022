@@ -134,6 +134,9 @@
     <Compile Include="Data\esp_Narudzbe_GetProizvodeByNarudzbaId_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\esp_Narudzbe_SelectAktivneByKupacID_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\esp_Narudzbe_SelectAktivne_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
@@ -216,6 +219,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ExceptionHandler.cs" />
+    <Compile Include="Util\Preporuka.cs" />
     <Compile Include="Util\UIHelper.cs" />
   </ItemGroup>
   <ItemGroup>

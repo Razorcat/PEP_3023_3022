@@ -51,6 +51,27 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    <asp:Label ID="lblPreporuka" runat="server" Text="Preporuka"></asp:Label>
+    <h4>Preporuka</h4>
+                 <asp:DataGrid ID="gdPreporuka" runat="server"  AutoGenerateColumns="False" PageSize="5"  OnItemDataBound="dgProizvodi_ItemDataBoundPreporuka" DataKeyField="ProizvodID" OnItemCommand="dgProizvodi_ItemCommandPreporuka" BackColor="#FFFFCC" BorderColor="Black" BorderStyle="Groove" BorderWidth="2px" ForeColor="#FF5050">                        
+                        <Columns>
+                            <asp:TemplateColumn>
+                                <ItemTemplate>
+                                    <asp:Image ID="imgSlikaThumb" runat="server" BackColor="#FF9999" BorderStyle="Solid" />
+                                 </ItemTemplate>
+                             </asp:TemplateColumn>
+                                    <asp:BoundColumn DataField="Naziv" HeaderText="Naziv "> </asp:BoundColumn>
+                                    <asp:BoundColumn DataField="Sifra" HeaderText="Šifra "> </asp:BoundColumn>
+                                    <asp:BoundColumn DataField="Cijena" HeaderText="Cijena "> </asp:BoundColumn>
+                            <asp:TemplateColumn>
+                                <ItemTemplate>              
+                                    <asp:TextBox ID="txtbKolicina" runat="server" Width="25px" Text="1"></asp:TextBox>
+                                    <asp:LinkButton ID="lbtnDodajUKosaricu" runat="server" CommandName="DodajUKopruCmd">Dodaj u košarici</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateColumn>
+                            </Columns>
+                     </asp:DataGrid>
+    <br />    
     <asp:Label ID="lblBrosura" runat="server" Text="Brošura"></asp:Label>
    
     <asp:ListView ID="lvBrosura" runat="server" DataSourceID="odsLvBrosura">

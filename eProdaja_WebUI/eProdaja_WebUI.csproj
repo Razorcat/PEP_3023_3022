@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -128,6 +129,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Order\MojeNarudzbe.aspx" />
     <Content Include="Questions.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
@@ -254,6 +256,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Order\MojeNarudzbe.aspx.cs">
+      <DependentUpon>MojeNarudzbe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MojeNarudzbe.aspx.designer.cs">
+      <DependentUpon>MojeNarudzbe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Questions.aspx.cs">
       <DependentUpon>Questions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

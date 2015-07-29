@@ -24,6 +24,11 @@ namespace eProdaja_WebUI.Order
             get { return (decimal)Session["iznos"]; }
 
         }
+        public Kupci kupac
+        {
+            get { return (Kupci)Session["kupac"]; }
+            set { Session["kupac"] = value; }
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {

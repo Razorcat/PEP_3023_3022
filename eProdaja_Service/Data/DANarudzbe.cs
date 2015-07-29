@@ -44,5 +44,9 @@ namespace eProdaja_Service.Data
         public static NarudzbaStavke NarudzbeStavkaGetByProizvodId(int ProizvodId) {
             return Connection.dm.esp_NarudzbeStavka_GetByProizvodID(ProizvodId).First();
         }
+        public static List<esp_Narudzbe_SelectAktivneByKupacID_Result> GetAktivneNarudzbeByKupacID(int kupacID)
+        {
+            return Connection.dm.esp_Narudzbe_SelectAktivneByKupacID(kupacID).ToList();
+        }
     }
 }

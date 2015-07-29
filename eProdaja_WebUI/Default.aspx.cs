@@ -6,12 +6,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using eProdaja_Service.Data;
+using eProdaja_Service.Util;
 
 namespace eProdaja_WebUI
 {
     public partial class _Default : Page
     {
         protected List<esp_Proizvodi_SelectByVrstaNaziv_Result> proizvodi;
+        public Preporuka preporuka;
+        public List<Proizvodi> pList;
 
         private Narudzbe narudzba {
             get { return (Narudzbe)Session["narudzba"]; }
@@ -124,6 +127,8 @@ namespace eProdaja_WebUI
                 HyperLink link = (HyperLink)this.Master.FindControl("cartLink");
                 link.Text = string.Format("My Cart({0})", narudzba.NarudzbaStavke.Count);
 
+                BindPreporuka(proizvodId);
+
             }
         }
 
@@ -137,6 +142,33 @@ namespace eProdaja_WebUI
           //  lvBrosura.DataBind();
           //  gvBrosure.DataSource = DABrosure.SelectAll();
           //  gvBrosure.DataBind();
+        }
+
+
+        /////////////////////preporuka
+
+        private void BindPreporuka(int ProizvodID)
+        {
+            preporuka = new Preporuka();
+            pList = preporuka.GetSlicneProizvode(ProizvodID);
+            if (pList.Count > 0)
+            {
+                gdPreporuka.DataSource = pList;
+                gdPreporuka.DataBind();
+            }
+        }
+        protected void dgProizvodi_ItemDataBoundPreporuka(object sender, DataGridItemEventArgs e)
+        {
+            if (e.Item.ItemIndex != -1) ///
+            {
+                Image img = (Image)e.Item.FindControl("imgSlikaThumb");
+                img.ImageUrl = "~/ImageHandler.ashx?proizvodId=" + pList[e.Item.ItemIndex].ProizvodID;
+            }
+        }
+
+        protected void dgProizvodi_ItemCommandPreporuka(object source, DataGridCommandEventArgs e)
+        {
+
         }
     }
 }

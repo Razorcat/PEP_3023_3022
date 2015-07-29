@@ -781,5 +781,14 @@ namespace eProdaja_Service.Data
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<NarudzbaStavke>("esp_NarudzbeStavka_GetByProizvodID", mergeOption, proizvodIDParameter);
         }
+    
+        public virtual ObjectResult<esp_Narudzbe_SelectAktivneByKupacID_Result> esp_Narudzbe_SelectAktivneByKupacID(Nullable<int> kupacID)
+        {
+            var kupacIDParameter = kupacID.HasValue ?
+                new ObjectParameter("KupacID", kupacID) :
+                new ObjectParameter("KupacID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<esp_Narudzbe_SelectAktivneByKupacID_Result>("esp_Narudzbe_SelectAktivneByKupacID", kupacIDParameter);
+        }
     }
 }

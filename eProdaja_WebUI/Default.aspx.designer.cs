@@ -49,6 +49,24 @@ namespace eProdaja_WebUI {
         protected global::System.Web.UI.WebControls.GridView proizvodiGrid;
         
         /// <summary>
+        /// lblPreporuka control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPreporuka;
+        
+        /// <summary>
+        /// gdPreporuka control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataGrid gdPreporuka;
+        
+        /// <summary>
         /// lblBrosura control.
         /// </summary>
         /// <remarks>

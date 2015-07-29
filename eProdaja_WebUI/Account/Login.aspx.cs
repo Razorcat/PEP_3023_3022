@@ -11,6 +11,12 @@ namespace eProdaja_WebUI.Account
 {
     public partial class Login : Page
     {
+        public Kupci kupac
+        {
+            get { return (Kupci)Session["kupac"]; }
+            set { Session["kupac"] = value; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";
@@ -27,8 +33,8 @@ namespace eProdaja_WebUI.Account
         {
             try
             {
-                Kupci k = DAKupci.SelectByKorisnickoIme(LoginBox.UserName, LoginBox.Password);
-                if (k == null)
+                kupac = DAKupci.SelectByKorisnickoIme(LoginBox.UserName, LoginBox.Password);
+                if (kupac == null)
                 {
                     LoginBox.FailureText = "Korisnik sa unesenim korisničkim imenom nije pronađen ili je račun neaktivan.";
                     e.Authenticated = false;

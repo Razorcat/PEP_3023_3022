@@ -587,6 +587,9 @@
           <Parameter Name="Otkazano" Type="bit" Mode="In" />
         </Function>
         <Function Name="esp_Narudzbe_SelectAktivne" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="esp_Narudzbe_SelectAktivneByKupacID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KupacID" Type="int" Mode="In" />
+        </Function>
         <Function Name="esp_NarudzbeStavka_GetByProizvodID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ProizvodID" Type="int" Mode="In" />
         </Function>
@@ -1558,7 +1561,10 @@
             <Parameter Name="Otkazano" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="esp_NarudzbeStavka_GetByProizvodID" EntitySet="NarudzbaStavke" ReturnType="Collection(Model.NarudzbaStavke)">
-            <Parameter Name="ProizvodID" Mode="In" Type="Int32" />
+          <Parameter Name="ProizvodID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Narudzbe_SelectAktivneByKupacID" ReturnType="Collection(Model.esp_Narudzbe_SelectAktivneByKupacID_Result)">
+            <Parameter Name="KupacID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="esp_BrosureProizvodi_SelectAll_Result">
@@ -1820,6 +1826,13 @@
           <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
           <Property Type="Int32" Name="ProizvodID" Nullable="false" />
           <Property Type="Int32" Name="Kolicina" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="esp_Narudzbe_SelectAktivneByKupacID_Result">
+          <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+          <Property Type="String" Name="BrojNarudzbe" Nullable="false" MaxLength="20" />
+          <Property Type="Boolean" Name="Status" Nullable="false" />
+          <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="Iznos" Nullable="true" Precision="38" Scale="2" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2291,6 +2304,17 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="esp_Narudzbe_Otkazi" FunctionName="Model.Store.esp_Narudzbe_Otkazi" />
           <FunctionImportMapping FunctionImportName="esp_NarudzbeStavka_GetByProizvodID" FunctionName="Model.Store.esp_NarudzbeStavka_GetByProizvodID">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Narudzbe_SelectAktivneByKupacID" FunctionName="Model.Store.esp_Narudzbe_SelectAktivneByKupacID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.esp_Narudzbe_SelectAktivneByKupacID_Result">
+                <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+                <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+                <ScalarProperty Name="Iznos" ColumnName="Iznos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
