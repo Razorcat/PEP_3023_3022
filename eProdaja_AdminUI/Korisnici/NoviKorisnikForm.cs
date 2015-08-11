@@ -42,6 +42,7 @@ namespace eProdaja_AdminUI.Korisnici
             telefonInput.Text = korisnikIzmjene.Telefon;
 
             korisnickoImeInput.Text = korisnikIzmjene.KorisnickoIme;
+           
         }
 
         private void NoviKorisnikForm_Load(object sender, EventArgs e)
@@ -182,23 +183,26 @@ namespace eProdaja_AdminUI.Korisnici
 
         private void lozinkaInput_Validating(object sender, CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(lozinkaInput.Text.Trim()))
+            if (korisnikIzmjene == null)
             {
-                e.Cancel = true;
-                errorProvider.SetError(lozinkaInput, Global.GetString("pass_req"));
+                if (String.IsNullOrEmpty(lozinkaInput.Text.Trim()))
+                {
+                    e.Cancel = true;
+                    errorProvider.SetError(lozinkaInput, Global.GetString("pass_req"));
+                }
+                else if (lozinkaInput.Text.Length < 4)
+                {
+                    e.Cancel = true;
+                    errorProvider.SetError(lozinkaInput, Global.GetString("pass_err"));
+                }
+                else
+                    errorProvider.SetError(lozinkaInput, "");
             }
-            else if (lozinkaInput.Text.Length < 4)
-            {
-                e.Cancel = true;
-                errorProvider.SetError(lozinkaInput, Global.GetString("pass_err"));
-            }
-            else
-                errorProvider.SetError(lozinkaInput, "");
         }
 
         private void ulogeList_Validating(object sender, CancelEventArgs e)
         {
-            if (ulogeList.CheckedItems.Count == 0)
+            if (ulogeList.CheckedItems.Count == 0 && korisnikIzmjene==null)
             {
                 e.Cancel = true;
                 errorProvider.SetError(ulogeList, Global.GetString("roles_req"));
