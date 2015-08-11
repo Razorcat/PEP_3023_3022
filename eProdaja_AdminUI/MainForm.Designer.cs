@@ -52,10 +52,11 @@
             this.novaProdajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izvještajiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prodajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.racunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.korisnikLabel = new System.Windows.Forms.ToolStripLabel();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.racunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.qAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,8 @@
             this.korisniciToolStripMenuItem,
             this.ulazRobeToolStripMenuItem,
             this.izlazRobeToolStripMenuItem,
-            this.izvještajiToolStripMenuItem});
+            this.izvještajiToolStripMenuItem,
+            this.qAToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(722, 40);
@@ -286,6 +288,13 @@
             this.prodajaToolStripMenuItem.Text = "Prodaja";
             this.prodajaToolStripMenuItem.Click += new System.EventHandler(this.prodajaToolStripMenuItem_Click);
             // 
+            // racunToolStripMenuItem
+            // 
+            this.racunToolStripMenuItem.Name = "racunToolStripMenuItem";
+            this.racunToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.racunToolStripMenuItem.Text = "racun";
+            this.racunToolStripMenuItem.Click += new System.EventHandler(this.racunToolStripMenuItem_Click);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -310,12 +319,14 @@
             this.notifyIcon.Visible = true;
             this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
             // 
-            // racunToolStripMenuItem
+            // qAToolStripMenuItem
             // 
-            this.racunToolStripMenuItem.Name = "racunToolStripMenuItem";
-            this.racunToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
-            this.racunToolStripMenuItem.Text = "racun";
-            this.racunToolStripMenuItem.Click += new System.EventHandler(this.racunToolStripMenuItem_Click);
+            this.qAToolStripMenuItem.Image = global::eProdaja_AdminUI.Properties.Resources.questionbook32;
+            this.qAToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.qAToolStripMenuItem.Name = "qAToolStripMenuItem";
+            this.qAToolStripMenuItem.Size = new System.Drawing.Size(87, 36);
+            this.qAToolStripMenuItem.Text = "Pitanja";
+            this.qAToolStripMenuItem.Click += new System.EventHandler(this.qAToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -370,6 +381,7 @@
         private System.Windows.Forms.ToolStripMenuItem aktivneNarudžbeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novaProdajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem racunToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem qAToolStripMenuItem;
     }
 }
 

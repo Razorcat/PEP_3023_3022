@@ -110,6 +110,12 @@
     <Compile Include="Korisnici\NoviKorisnikForm.Designer.cs">
       <DependentUpon>NoviKorisnikForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Korisnici\PitanjaOdgovori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\PitanjaOdgovori.Designer.cs">
+      <DependentUpon>PitanjaOdgovori.cs</DependentUpon>
+    </Compile>
     <Compile Include="Korisnici\PretragaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     <EmbeddedResource Include="Izvjestaji\RacunReport.rdlc" />
     <EmbeddedResource Include="Korisnici\NoviKorisnikForm.resx">
       <DependentUpon>NoviKorisnikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\PitanjaOdgovori.resx">
+      <DependentUpon>PitanjaOdgovori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Korisnici\PretragaForm.resx">
       <DependentUpon>PretragaForm.cs</DependentUpon>

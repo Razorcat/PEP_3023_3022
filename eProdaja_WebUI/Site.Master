@@ -68,7 +68,7 @@
                         <li><a runat="server" href="~/">Početna</a></li>
                         <li><a runat="server" href="~/About">O nama</a></li>
                         <li><a runat="server" href="~/Contact">Kontakt</a></li>
-                         <li><a runat="server" href="~/Questions">Pitanja</a></li>
+                         <li><a runat="server" href="~/Pitanja">Pitanja</a></li>
                         <li>
                             <asp:HyperLink ID="cartLink" runat="server" NavigateUrl="~/Order/Cart.aspx">Moja korpa</asp:HyperLink>
                         </li>

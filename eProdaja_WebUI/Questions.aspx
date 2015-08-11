@@ -26,6 +26,6 @@
          Ako želite da Vaš miris okružuje duže, koristite dezodorans, sprej za tijelo ili mirisni losion za tijelo u kombinaciji sa parfemom. 
          Predlažemo da kombinujete proizvode iz iste linije da biste izbjegli previše različitih mirisa istovremeno.</p>
     </article>
-
     
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 </asp:Content>

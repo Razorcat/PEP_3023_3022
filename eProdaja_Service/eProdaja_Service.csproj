@@ -62,6 +62,7 @@
     <Compile Include="Data\DAKorisnici.cs" />
     <Compile Include="Data\DAKupci.cs" />
     <Compile Include="Data\DANarudzbe.cs" />
+    <Compile Include="Data\DAPitanjaOdgovori.cs" />
     <Compile Include="Data\DAProdaja.cs" />
     <Compile Include="Data\DAProizvodi.cs" />
     <Compile Include="Data\DASkladista.cs" />
@@ -138,6 +139,9 @@
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_Narudzbe_SelectAktivne_Result.cs">
+      <DependentUpon>DM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\esp_Pitanja_GetAll_Result.cs">
       <DependentUpon>DM.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\esp_ProizvodiSkladiste_SelectByNazivSifra_Result.cs">

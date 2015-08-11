@@ -7,11 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace eProdaja_WebUI
 {
-    public partial class Questions1 : Page
+    public partial class Questions : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+        }
 
+        private void BindGrid()
+        {           
+            
         }
     }
 }

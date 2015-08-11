@@ -129,7 +129,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="NovoPitanje.aspx" />
     <Content Include="Order\MojeNarudzbe.aspx" />
+    <Content Include="Pitanja.aspx" />
     <Content Include="Questions.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
@@ -256,12 +258,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NovoPitanje.aspx.cs">
+      <DependentUpon>NovoPitanje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NovoPitanje.aspx.designer.cs">
+      <DependentUpon>NovoPitanje.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Order\MojeNarudzbe.aspx.cs">
       <DependentUpon>MojeNarudzbe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Order\MojeNarudzbe.aspx.designer.cs">
       <DependentUpon>MojeNarudzbe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pitanja.aspx.cs">
+      <DependentUpon>Pitanja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pitanja.aspx.designer.cs">
+      <DependentUpon>Pitanja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Questions.aspx.cs">
       <DependentUpon>Questions.aspx</DependentUpon>

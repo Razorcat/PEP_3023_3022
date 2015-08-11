@@ -790,5 +790,40 @@ namespace eProdaja_Service.Data
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<esp_Narudzbe_SelectAktivneByKupacID_Result>("esp_Narudzbe_SelectAktivneByKupacID", kupacIDParameter);
         }
+    
+        public virtual ObjectResult<esp_Pitanja_GetAll_Result> esp_Pitanja_GetAll()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<esp_Pitanja_GetAll_Result>("esp_Pitanja_GetAll");
+        }
+    
+        public virtual int esp_Pitanja_Insert(Nullable<int> kupacID, string pitanje)
+        {
+            var kupacIDParameter = kupacID.HasValue ?
+                new ObjectParameter("KupacID", kupacID) :
+                new ObjectParameter("KupacID", typeof(int));
+    
+            var pitanjeParameter = pitanje != null ?
+                new ObjectParameter("Pitanje", pitanje) :
+                new ObjectParameter("Pitanje", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("esp_Pitanja_Insert", kupacIDParameter, pitanjeParameter);
+        }
+    
+        public virtual int esp_Pitanja_OdgovorInsert(Nullable<int> pitanjeID, Nullable<int> korisnikID, string odgovor)
+        {
+            var pitanjeIDParameter = pitanjeID.HasValue ?
+                new ObjectParameter("PitanjeID", pitanjeID) :
+                new ObjectParameter("PitanjeID", typeof(int));
+    
+            var korisnikIDParameter = korisnikID.HasValue ?
+                new ObjectParameter("KorisnikID", korisnikID) :
+                new ObjectParameter("KorisnikID", typeof(int));
+    
+            var odgovorParameter = odgovor != null ?
+                new ObjectParameter("Odgovor", odgovor) :
+                new ObjectParameter("Odgovor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("esp_Pitanja_OdgovorInsert", pitanjeIDParameter, korisnikIDParameter, odgovorParameter);
+        }
     }
 }

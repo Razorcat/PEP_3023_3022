@@ -191,5 +191,14 @@ namespace eProdaja_AdminUI
             form.MdiParent = this;
             form.Show();
         }
+
+        private void qAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Korisnici.PitanjaOdgovori form = new Korisnici.PitanjaOdgovori(Global.prijavljeniKorisnik);
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

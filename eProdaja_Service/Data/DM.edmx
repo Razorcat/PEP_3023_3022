@@ -593,6 +593,16 @@
         <Function Name="esp_NarudzbeStavka_GetByProizvodID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ProizvodID" Type="int" Mode="In" />
         </Function>
+        <Function Name="esp_Pitanja_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="esp_Pitanja_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="KupacID" Type="int" Mode="In" />
+          <Parameter Name="Pitanje" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="esp_Pitanja_OdgovorInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PitanjeID" Type="int" Mode="In" />
+          <Parameter Name="KorisnikID" Type="int" Mode="In" />
+          <Parameter Name="Odgovor" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="esp_Proizvodi_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
           <Parameter Name="Sifra" Type="nvarchar" Mode="In" />
@@ -1564,7 +1574,17 @@
           <Parameter Name="ProizvodID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="esp_Narudzbe_SelectAktivneByKupacID" ReturnType="Collection(Model.esp_Narudzbe_SelectAktivneByKupacID_Result)">
+          <Parameter Name="KupacID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Pitanja_GetAll" ReturnType="Collection(Model.esp_Pitanja_GetAll_Result)" />
+          <FunctionImport Name="esp_Pitanja_Insert">
             <Parameter Name="KupacID" Mode="In" Type="Int32" />
+            <Parameter Name="Pitanje" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="esp_Pitanja_OdgovorInsert">
+            <Parameter Name="PitanjeID" Mode="In" Type="Int32" />
+            <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+            <Parameter Name="Odgovor" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="esp_BrosureProizvodi_SelectAll_Result">
@@ -1833,6 +1853,16 @@
           <Property Type="Boolean" Name="Status" Nullable="false" />
           <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
           <Property Type="Decimal" Name="Iznos" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="esp_Pitanja_GetAll_Result">
+          <Property Type="String" Name="Kupac" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="PitanjeID" Nullable="false" />
+          <Property Type="Int32" Name="KorisnikID" Nullable="true" />
+          <Property Type="Int32" Name="KupacID" Nullable="false" />
+          <Property Type="String" Name="Pitanje" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Odgovor" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Administrator" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2316,6 +2346,22 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Pitanja_GetAll" FunctionName="Model.Store.esp_Pitanja_GetAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.esp_Pitanja_GetAll_Result">
+                <ScalarProperty Name="Kupac" ColumnName="Kupac" />
+                <ScalarProperty Name="PitanjeID" ColumnName="PitanjeID" />
+                <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+                <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+                <ScalarProperty Name="Pitanje" ColumnName="Pitanje" />
+                <ScalarProperty Name="Odgovor" ColumnName="Odgovor" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+                <ScalarProperty Name="Administrator" ColumnName="Administrator" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="esp_Pitanja_Insert" FunctionName="Model.Store.esp_Pitanja_Insert" />
+          <FunctionImportMapping FunctionImportName="esp_Pitanja_OdgovorInsert" FunctionName="Model.Store.esp_Pitanja_OdgovorInsert" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
