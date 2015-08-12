@@ -18,7 +18,6 @@ namespace eProdaja_AdminUI.Korisnici
         public PitanjaOdgovori(eProdaja_Service.Data.Korisnici k)
         {
             InitializeComponent();
-
             if (k != null)
             {
                 korisnik = k;               
