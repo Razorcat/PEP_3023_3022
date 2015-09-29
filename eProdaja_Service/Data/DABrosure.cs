@@ -11,9 +11,7 @@ namespace eProdaja_Service.Data
     {
         public static void Insert(Brosure b)
         {
-
             Connection.dm.esp_Brosure_Insert(b.NazivBrosure,b.DatumPocetka,b.DatumIsteka);
-
         }
 
         public static void insertBrosureProizvodi(BrosureProizvodi bp)
@@ -35,9 +33,7 @@ namespace eProdaja_Service.Data
 
         public static List<esp_Proizvodi_SelectByBrosura_Result> GetBrosura(int brosuraId)
         {
-
             return Connection.dm.esp_Proizvodi_SelectByBrosura(brosuraId).ToList();
-
         }
 
         public static List<esp_BrosureProizvodiGetByBrosuraID_Result> GetBrosureProizvodi(int BrosuraId)

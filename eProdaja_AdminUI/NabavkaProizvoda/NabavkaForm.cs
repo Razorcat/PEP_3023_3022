@@ -60,7 +60,6 @@ namespace eProdaja_AdminUI.NabavkaProizvoda
 
             if (broj > 0)
             {
-
                 DodajStavku();
                 BindGrid();
             }
